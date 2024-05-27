@@ -15,7 +15,7 @@ class ConvNeck(nn.Module):
         for c_in,c_out in zip(in_channels,out_channels):
             self.convs.append(nn.Conv2d(c_in,c_out,1))
     def forward(self,x):
-        assert len(x)==len(self.convs)
+        assert len(x)==len(self.convs),f"{len(x)}=={len(self.convs)}"
         out=[]
         for num,i in enumerate(x):
             out.append(self.convs[num](i))
@@ -57,14 +57,17 @@ def build_ms_attn_flow_model(c, c_feats, all_dims):
     n_block = c.num_transformer_blocks
     clamp_alpha = c.clamp_alpha
     
-    mid_c=sum(c_feats)//len(c_feats)
-    mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
-    c_feats_new=[mid_c]*len(c_feats)
-    print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))
-    conv_neck=ConvNeck(c_feats,c_feats_new)
-    c_feats=c_feats_new
-    for i in all_dims:
-        i[1]=mid_c
+    if c.use_conv:
+        mid_c=sum(c_feats)//len(c_feats)
+        mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
+        c_feats_new=[mid_c]*len(c_feats)
+        print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))
+        conv_neck=ConvNeck(c_feats,c_feats_new)
+        c_feats=c_feats_new
+        for i in all_dims:
+            i[1]=mid_c
+    else:
+        conv_neck=nn.Module()
 
     msAttn_flow=Ff.SequenceINN(*all_dims,force_tuple_output=True)
     print('Build msAttn flow: channels:{}, block:{}, cond:{}'.format(c_feats, n_block, c_conds))
@@ -74,7 +77,7 @@ def build_ms_attn_flow_model(c, c_feats, all_dims):
         else:
             attn_block=AttentionTD
         msAttn_flow.append(MSAttnFlowBlock,cond=0,cond_shape=(c_conds[0],1,1),
-                        attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
+                        use_attn=c.use_attn,attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
 
     print("Build fusion flow with channels", c_feats)
     nodes = list()

@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from .DAT import DAttentionBaseline
+from models.transformer_flow_blocks.DAT import DAttentionBaseline
 
 class AttentionTD(nn.Module):
     def __init__(self, variable_dims:list[tuple[int]],) -> None:
@@ -158,7 +158,7 @@ class Normalize(nn.Module):
         self._update_para()
     def forward(self,x,rev=False):
         b,c,h,w=x.shape
-        log_jac=torch.repeat_interleave(torch.sum(-0.5*torch.log(self.paras["var"] + self.paras["eps"]))*h*w,repeats=b).to(x.device)
+        log_jac=torch.repeat_interleave(torch.sum(-0.5*torch.log(self.paras["var"] + self.paras["eps"]))*h*w*c,repeats=b).to(x.device)
         if rev:
             x_r = x * torch.sqrt(self.paras["var"] + self.paras["eps"]).view(1,c,1,1) + self.paras["mean"].view(1,c,1,1)
             return x_r,-log_jac

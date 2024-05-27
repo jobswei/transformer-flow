@@ -1,0 +1,3313 @@
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([1, j0, 3]) <class 'torch.nested._internal.nested_tensor.NestedTensor'>
+torch.Size([3, 3]) <class 'torch.Tensor'>
+torch.Size([2]) <class 'torch.Tensor'>
+torch.Size([64]) <class 'torch.Tensor'>
+torch.Size([64]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([128]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([256]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([512]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([1024]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 3, 518, 518]) <class 'torch.Tensor'>
+torch.Size([4, 64, 256, 256]) <class 'torch.Tensor'>
+torch.Size([4, 64, 256, 256]) <class 'torch.Tensor'>
+torch.Size([4, 64, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 130, 130]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 130, 130]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 130, 130]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 128, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 128, 128]) <class 'torch.Tensor'>
+torch.Size([4, 256, 130, 130]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 66, 66]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 66, 66]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 66, 66]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 66, 66]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 34, 34]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 34, 34]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 34, 34]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 34, 34]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 34, 34]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 256, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 512, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([592]) <class 'torch.Tensor'>
+torch.Size([]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([3, 1, 512, 512]) <class 'torch.Tensor'>
+torch.Size([3, 64, 64, 64]) <class 'torch.Tensor'>
+torch.Size([3, 64, 32, 32]) <class 'torch.Tensor'>
+torch.Size([3, 64, 16, 16]) <class 'torch.Tensor'>
+torch.Size([3, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([3, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([3, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([3, 64, 64]) <class 'torch.Tensor'>
+torch.Size([3, 32, 32]) <class 'torch.Tensor'>
+torch.Size([3, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 888, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 222]) <class 'torch.Tensor'>
+torch.Size([4, 222, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 256]) <class 'torch.Tensor'>
+torch.Size([4, 4, 127, 127]) <class 'torch.Tensor'>
+torch.Size([4, 4096, 256, 2]) <class 'torch.Tensor'>
+torch.Size([16, 4096, 256]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16, 360]) <class 'torch.Tensor'>
+torch.Size([4, 360, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([1, 592, 1, 1]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 8, 8, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 8, 8]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 63, 63]) <class 'torch.Tensor'>
+torch.Size([4, 1024, 64, 2]) <class 'torch.Tensor'>
+torch.Size([16, 1024, 64]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 296]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 4, 4, 2]) <class 'torch.Tensor'>
+torch.Size([4, 296, 4, 4]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 1, 16]) <class 'torch.Tensor'>
+torch.Size([4, 4, 31, 31]) <class 'torch.Tensor'>
+torch.Size([4, 256, 16, 2]) <class 'torch.Tensor'>
+torch.Size([16, 256, 16]) <class 'torch.Tensor'>
+torch.Size([4, 296, 16, 16]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([592, 592]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 64, 64]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 592, 32, 32]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
+torch.Size([4, 592, 16, 16]) <class 'torch.Tensor'>
