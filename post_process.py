@@ -95,17 +95,16 @@ def feature_heatmap(feature1,feature2):
     dis=cos_distance(feature1,feature2)
     return dis
 def post_process_resampled(c, size_list, outputs_list, ms_attn_flow,fusion_flow, hidden_variables,cond_list=None):
+    print("++++RESAMPLE ! ! !+++++++++++++++ ")
     thresholds=c.resample_args["thresholds"]
     stragety=c.resample_args["stragety"]
+    num_feature=len(outputs_list)
+    num_batch=len(outputs_list[0])
 
     print('Multi-scale sizes:', size_list)
     logp_maps = [list() for _ in size_list]
     prop_maps = [list() for _ in size_list]
 
-    num_feature=len(outputs_list)
-    num_batch=len(outputs_list[0])
-
-    idx = 0
     for iter_batch in tqdm.tqdm(range(num_batch)):
         origin_variables=[hidden_variables[i][iter_batch] for i in range(num_feature)]
         resampled_variables=[]
@@ -116,32 +115,43 @@ def post_process_resampled(c, size_list, outputs_list, ms_attn_flow,fusion_flow,
             prob_map = torch.exp(output_norm) # convert to probs in range [0:1]
             resampled_variable=multi_thre_resample(hidden_variable,prob_map,thresholds,stragety)
             resampled_variables.append(resampled_variable)
-        import gc
-        objs = set()
-        for obj in gc.get_objects():
-            if torch.is_tensor(obj) and not isinstance(obj, torch.nn.parameter.Parameter):
-                objs.add(obj)
-        print(len(objs))
+
         resampled_features=flow_reverse(resampled_variables,ms_attn_flow,fusion_flow,cond_list[iter_batch],fuse=True)
-        for obj in gc.get_objects():
-            if torch.is_tensor(obj) and not isinstance(obj, torch.nn.parameter.Parameter):
-                if obj not in objs:
-                    objs.add(obj)
-                    referer = gc.get_referrers(obj)
-                    pass
-        print(len(objs))
-        origin_features=origin_variables#flow_reverse(origin_variables,flow_models,cond_list[iter_batch],fuse=False)
-        # import gc
-        # with open(f'tensors_{idx}.txt', 'w') as f:
-        #     for obj in gc.get_objects():
-        #         if torch.is_tensor(obj) and not isinstance(obj, torch.nn.parameter.Parameter):
-        #             print(obj.shape, type(obj), file=f)
-        # idx += 1
-        # torch.cuda.empty_cache()
-        # torch.cuda.ipc_collect()
-        # for iter_feat in range(num_feature):
-        #     prop_maps[iter_feat].append(feature_heatmap(origin_features[iter_feat].detach().permute(0,2,3,1),resampled_features[iter_feat].detach().permute(0,2,3,1)))
+        origin_features=flow_reverse(origin_variables,ms_attn_flow,fusion_flow,cond_list[iter_batch],fuse=False)
 
+        for iter_feat in range(num_feature):
+            score=feature_heatmap(origin_features[iter_feat].detach().permute(0,2,3,1),resampled_features[iter_feat].detach().permute(0,2,3,1))
+            score=(1+score)/2
+            # score[score<1e-2]=1e-2
+            prob_map=score
+            prop_maps[iter_feat].append(F.interpolate(prob_map.unsqueeze(1),
+                size=c.input_size, mode='bilinear', align_corners=True).squeeze(1))
+            logp_map=torch.log(prob_map)
+            logp_maps[iter_feat].append(F.interpolate(logp_map.unsqueeze(1),
+                size=c.input_size, mode='bilinear', align_corners=True).squeeze(1))
+    prop_maps=[torch.cat(i,0) for i in prop_maps]
+    logp_maps=[torch.cat(i,0) for i in logp_maps]
+    logp_map = sum(logp_maps)
+    # if torch.any(torch.isnan(logp_map)):
+    #     print()
 
-    return 0
+    logp_map-= logp_map.max(-1, keepdim=True)[0].max(-2, keepdim=True)[0]
+    prop_map_mul = torch.exp(logp_map)
+    anomaly_score_map_mul = prop_map_mul.max(-1, keepdim=True)[0].max(-2, keepdim=True)[0] - prop_map_mul
+    batch = anomaly_score_map_mul.shape[0]
+    top_k = int(c.input_size[0] * c.input_size[1] * c.top_k)
+    anomaly_score = np.mean(
+        anomaly_score_map_mul.reshape(batch, -1).topk(top_k, dim=-1)[0].detach().cpu().numpy(),
+        axis=1)
 
+    prop_map_add = sum(prop_maps)
+    prop_map_add = prop_map_add.detach().cpu().numpy()
+    anomaly_score_map_add = prop_map_add.max(axis=(1, 2), keepdims=True) - prop_map_add
+
+    return anomaly_score, anomaly_score_map_add, anomaly_score_map_mul.detach().cpu().numpy()
+
+if __name__=="__main__":
+    a=torch.tensor([[[1,0]]],dtype=torch.float32)
+    b=torch.tensor([[[-1,0]]],dtype=torch.float32)
+    c=feature_heatmap(a,b)
+    print()

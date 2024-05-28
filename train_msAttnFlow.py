@@ -286,9 +286,14 @@ def train_msAttnFlow(c):
         print()
         train_meta_epoch(c, epoch, train_loader, extractor,  conv_neck,msAttn_flow, fusion_flow, params, optimizer, warmup_scheduler, decay_scheduler, scaler if c.amp_enable else None)
 
-        gt_label_list, gt_mask_list, outputs_list, size_list,_,_ = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
+        gt_label_list, gt_mask_list, outputs_list, size_list,hidden_variables,cond_list = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
 
-        anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = post_process(c, size_list, outputs_list)
+        if c.resample_args["resample"]:
+            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul \
+                = post_process_resampled(c, size_list, outputs_list,
+                                        msAttn_flow,fusion_flow,hidden_variables,cond_list)
+        else:
+            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = post_process(c, size_list, outputs_list)
 
         if c.pro_eval and (epoch > 0 and epoch % c.pro_eval_interval == 0):
             pro_eval = True
@@ -310,10 +315,10 @@ def train_msAttnFlow(c):
             )
 
         # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'last', c.ckpt_dir, optimizer)
-        # if best_det_auroc and c.mode == 'train':
-            # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
-        # if best_loc_auroc and c.mode == 'train':
-            # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
+        if best_det_auroc and c.mode == 'train':
+            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
+        if best_loc_auroc and c.mode == 'train':
+            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
         # if best_loc_pro and c.mode == 'train':
         #     save_weights(epoch, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
         import os.path as osp

@@ -25,7 +25,8 @@ def build_transformer_flow_model(c, c_feats, all_dims):
     n_block = c.num_transformer_blocks
     clamp_alpha = c.clamp_alpha
 
-    mid_c=sum(c_feats)//len(c_feats)
+    # mid_c=sum(c_feats)//len(c_feats)
+    mid_c=1024
     mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
     c_feats_new=[mid_c]*len(c_feats)
     print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))
@@ -72,12 +73,16 @@ def build_ms_attn_flow_model(c, c_feats, all_dims):
     msAttn_flow=Ff.SequenceINN(*all_dims,force_tuple_output=True)
     print('Build msAttn flow: channels:{}, block:{}, cond:{}'.format(c_feats, n_block, c_conds))
     for i in range(n_block):
-        if i//2==0:
-            attn_block=AttentionBU
+        if c.attn_all:
+            attn_block=AttentionAll
         else:
-            attn_block=AttentionTD
+            if i//2==0:
+                attn_block=AttentionBU
+            else:
+                attn_block=AttentionTD
         msAttn_flow.append(MSAttnFlowBlock,cond=0,cond_shape=(c_conds[0],1,1),
-                        use_attn=c.use_attn,attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
+                        use_attn=c.use_attn,use_ffn=c.use_ffn,use_norm=c.use_norm,
+                        attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
 
     print("Build fusion flow with channels", c_feats)
     nodes = list()

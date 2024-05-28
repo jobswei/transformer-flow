@@ -41,4 +41,4 @@ pro_eval = True
 pro_eval_interval = 6
 
 # results
-work_dir = './work_dirs2'
+work_dir = './work_dirs'
