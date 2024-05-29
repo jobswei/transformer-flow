@@ -25,8 +25,7 @@ def build_transformer_flow_model(c, c_feats, all_dims):
     n_block = c.num_transformer_blocks
     clamp_alpha = c.clamp_alpha
 
-    # mid_c=sum(c_feats)//len(c_feats)
-    mid_c=1024
+    mid_c=sum(c_feats)//len(c_feats)
     mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
     c_feats_new=[mid_c]*len(c_feats)
     print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))

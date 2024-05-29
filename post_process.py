@@ -62,20 +62,20 @@ def flow_reverse(resampled_variables,ms_attn_flow,fusion_flow,cond=None,fuse=Tru
     #     i.eval()
     for iter_thre in range(num_thre):
         x=[resampled_variables[i][iter_thre] for i in range(num_feature)]
-        resampled_feature,_=fusion_flow(x)
+        resampled_feature,_=fusion_flow(x,rev=True)
         # import gc
         # objs = set()
         # for obj in gc.get_objects():
         #     if torch.is_tensor(obj) and not isinstance(obj, torch.nn.parameter.Parameter):
         #         objs.add(obj)
-        resampled_feature,_=ms_attn_flow(list(resampled_feature),[cond,])
+        resampled_feature,_=ms_attn_flow(list(resampled_feature),[cond,],rev=True)
         # for obj in gc.get_objects():
         #     if torch.is_tensor(obj) and not isinstance(obj, torch.nn.parameter.Parameter):
         #         if obj not in objs:
         #             referers = gc.get_referrers(obj)
         resampled_features.append(resampled_feature)
-    torch.cuda.empty_cache()
-    torch.cuda.ipc_collect()
+    # torch.cuda.empty_cache()
+    # torch.cuda.ipc_collect()
     resampled_feature2=[sum([resampled_features[i][j] for i in range(num_thre)])/num_thre for j in range(num_feature)]
 
     return resampled_feature2

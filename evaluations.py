@@ -47,7 +47,7 @@ def eval_seg_pro(loc_pro_obs, epoch, gt_mask, anomaly_score_map, max_step=800):
     return loc_pro_auc, best
 
 def single_process(anomaly_score_map, gt_mask, thred):
-    binary_score_maps = np.zeros_like(anomaly_score_map, dtype=np.bool)
+    binary_score_maps = np.zeros_like(anomaly_score_map, dtype=np.bool_)
     binary_score_maps[anomaly_score_map <= thred] = 0
     binary_score_maps[anomaly_score_map >  thred] = 1
     pro = []

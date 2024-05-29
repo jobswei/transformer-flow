@@ -199,7 +199,7 @@ def load_weights(conv_neck,msAttn_flow,fusion_flow, ckpt_path, optimizer=None):
     return state_dict['epoch']
 
 
-def train_msAttnFlow(c):
+def train_OurFlow(c):
     
     if c.wandb_enable:
         wandb.finish()
@@ -225,7 +225,10 @@ def train_msAttnFlow(c):
         dims=[list(i.shape) for i in image]
         break
     c.output_channels=output_channels
-    conv_neck,msAttn_flow,fusion_flow=build_ms_attn_flow_model(c,output_channels,dims)
+    if c.flow_name=="msAttnFlow":
+        conv_neck,msAttn_flow,fusion_flow=build_ms_attn_flow_model(c,output_channels,dims)
+    elif c.flow_name=="TransformerFlow":
+        conv_neck,msAttn_flow,fusion_flow=build_transformer_flow_model(c,output_channels,dims)
     conv_neck=conv_neck.to(c.device)
     msAttn_flow=msAttn_flow.to(c.device)
     fusion_flow = fusion_flow.to(c.device)
@@ -303,7 +306,6 @@ def train_msAttnFlow(c):
         det_auroc, loc_auroc, loc_pro_auc, \
             best_det_auroc, best_loc_auroc, best_loc_pro = \
                 eval_det_loc(det_auroc_obs, loc_auroc_obs, loc_pro_obs, epoch, gt_label_list, anomaly_score, gt_mask_list, anomaly_score_map_add, anomaly_score_map_mul, pro_eval)
-
         if c.wandb_enable:
             wandb_run.log(
                 {

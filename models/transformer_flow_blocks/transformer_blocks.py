@@ -2,7 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-
+import sys
+from scipy import linalg as la
+sys.path.append("/home/xiaomi/transformer-flow")
 from models.transformer_flow_blocks.DAT import DAttentionBaseline
 
 class AttentionTD(nn.Module):
@@ -87,6 +89,36 @@ class AttentionAll(nn.Module):
         resTD,log_jac_td=self.attnTD(hidden_variables,rev=rev)
         resBU,log_jac_bu=self.attnBU(resTD,rev=rev)
         return resBU,(log_jac_bu+log_jac_td)
+
+class AttentionSelf(nn.Module):
+    def __init__(self, variable_dims:list[tuple[int]],) -> None:
+        super().__init__()
+        self.dat_blocks=nn.ModuleList()
+        for i in range(len(variable_dims)):
+            q_size=(variable_dims[i][-2],variable_dims[i][-1])
+            kv_size=(variable_dims[i][-2],variable_dims[i][-1])
+            c=variable_dims[i][-3]//2
+            dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,n_head_channels=c//4, n_groups=1,
+                                attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
+                                use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
+                                ksize=4,log_cpb=False)
+            self.dat_blocks.append(dat)
+    def forward(self,hidden_variables:list[torch.Tensor],rev=False):
+        b,c,h,w=hidden_variables[0].shape
+        results=[]
+        c1=hidden_variables[0].shape[1]//2
+        c2=hidden_variables[0].shape[1]-c1
+        for i in range(len(hidden_variables)):
+            res=hidden_variables[i].clone()
+            q=hidden_variables[i][:,:c1,...]
+            kv=hidden_variables[i][:,:c1,...]
+            attn,_,_=self.dat_blocks[i](q,kv)
+            attn=torch.cat((torch.zeros_like(res)[:,:c2,...],attn),dim=1)
+            res-=attn if rev else -1*attn
+            results.append(res)
+        return results,torch.zeros(len(hidden_variables),b).to(hidden_variables[0].device)
+
+
 def PLU_matrix(dim):
     import scipy
     np_w=scipy.linalg.qr(np.random.randn(dim,dim))[0].astype("float32") # 通过QR分解得到正交矩阵
@@ -150,6 +182,87 @@ class FeedForward(nn.Module):
         x=torch.matmul(w,x)
         x=x.permute(0,2,1,3)
         return x,log_jac
+    
+
+class VolumeNorm(nn.Module):
+    """
+        Volume Normalization.
+        CVN dims = (0,1);  SVN dims = (0,2,3)
+    """
+    def __init__(self, dims=(0,1) ):
+        super().__init__()
+        self.register_buffer('running_mean', torch.zeros(1,1,1,1))
+        self.momentum = 0.1
+        self.dims = dims
+    def forward(self, x):
+        if self.training:
+            sample_mean = torch.mean(x, dim=self.dims, keepdim=True) 
+            self.running_mean = (1-self.momentum) * self.running_mean + self.momentum * sample_mean
+            out = x - sample_mean
+        else:
+            out = x - self.running_mean
+        return out
+
+
+class InvConv2dLU(nn.Module):
+    """
+        Invertible 1x1Conv with volume normalization.
+    """
+    def __init__(self, in_channel, volumeNorm=False):
+        super().__init__()
+        self.volumeNorm = volumeNorm
+        weight = np.random.randn(in_channel, in_channel)
+        q, _ = la.qr(weight)
+        w_p, w_l, w_u = la.lu(q.astype(np.float32))
+        w_s = np.diag(w_u)
+        w_u = np.triu(w_u, 1)
+        u_mask = np.triu(np.ones_like(w_u), 1)
+        l_mask = u_mask.T
+
+        w_p = torch.from_numpy(w_p.copy())
+        w_l = torch.from_numpy(w_l.copy())
+        w_s = torch.from_numpy(w_s.copy())
+        w_u = torch.from_numpy(w_u.copy())
+
+        self.register_buffer("w_p", w_p)
+        self.register_buffer("u_mask", torch.from_numpy(u_mask))
+        self.register_buffer("l_mask", torch.from_numpy(l_mask))
+        self.register_buffer("s_sign", torch.sign(w_s))
+        self.register_buffer("l_eye", torch.eye(l_mask.shape[0]))
+        self.w_l = nn.Parameter(w_l)
+        self.w_s = nn.Parameter(w_s.abs().log())
+        self.w_u = nn.Parameter(w_u)
+
+    def forward(self, input, rev=False):
+        if rev:
+            return self.inverse(input)
+        batch, channel, height, width = input.shape
+        weight,log_s = self.calc_weight()
+        out = F.conv2d(input, weight)
+        log_jac=torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
+        return out,log_jac
+
+    def inverse(self, output):
+        batch, channel, height, width = output.shape
+        weight,log_s = self.calc_weight()
+        inv_weight = torch.inverse(weight.squeeze().double()).float()
+        input = F.conv2d(output, inv_weight.unsqueeze(2).unsqueeze(3))
+        log_jac=-1*torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
+        return input,log_jac
+
+    def calc_weight(self):
+        if self.volumeNorm:
+            w_s = self.w_s - self.w_s.mean() # volume normalization
+        else:
+            w_s = self.w_s
+        weight = (
+            self.w_p
+            @ (self.w_l * self.l_mask + self.l_eye)
+            @ ((self.w_u * self.u_mask) + torch.diag(self.s_sign * torch.exp(w_s)))
+        )
+        log_s=torch.log(torch.abs(w_s))
+        return weight.unsqueeze(2).unsqueeze(3),log_s
+
 
 class Normalize(nn.Module):
     def __init__(self,input_dim):
@@ -169,11 +282,13 @@ class Normalize(nn.Module):
         self.paras={"var":self.norm.running_var.detach().clone(),"eps":self.norm.eps,"mean":self.norm.running_mean.detach().clone()}
 
 class TransformFlowBlock(nn.Module):
-    def __init__(self,variable_dims:tuple[tuple[int]]) -> None:
+    def __init__(self,variable_dims:tuple[tuple[tuple[int]]]) -> None:
         super().__init__()
         self.variable_dims=list(variable_dims[0])
+        self.self_attention=AttentionSelf(self.variable_dims)
         self.attention=AttentionAll(self.variable_dims)
-        self.ffn=FeedForward(self.variable_dims[0][1],self.variable_dims[0][1])
+        # self.ffn=FeedForward(self.variable_dims[0][1],self.variable_dims[0][1])
+        self.ffn=InvConv2dLU(self.variable_dims[0][1])
         self.norm=Normalize(self.variable_dims[0][1])
     def output_dims(self,dim_in):
         return dim_in
@@ -185,19 +300,23 @@ class TransformFlowBlock(nn.Module):
                 attn,norm_log_jac=self.norm(attn,rev=True)
                 attn,ffn_log_jac=self.ffn(attn,rev=True)
                 results.append(attn)
-                log_jacs[num]+=(ffn_log_jac+norm_log_jac)
+                log_jacs[num]+=(ffn_log_jac)
                 log_jacs[num]+=(norm_log_jac)
             results,attn_log_jac=self.attention(results,rev=True)
             log_jacs+=attn_log_jac
+            results,self_attn_log_jac=self.self_attention(results,rev=True)
+            log_jacs+=self_attn_log_jac
             return results,log_jacs
         
-        attns,attn_log_jac=self.attention(hidden_variables)
+        self_attns,self_attn_log_jac=self.self_attention(hidden_variables)
+        log_jacs+=self_attn_log_jac
+        attns,attn_log_jac=self.attention(self_attns)
         log_jacs+=attn_log_jac
         for num,attn in enumerate(attns):
             attn,ffn_log_jac=self.ffn(attn)
             attn,norm_log_jac=self.norm(attn)
             results.append(attn)
-            log_jacs[num]+=(ffn_log_jac+norm_log_jac)
+            log_jacs[num]+=(ffn_log_jac)
             log_jacs[num]+=(norm_log_jac)
         return results,log_jacs
 
@@ -205,21 +324,30 @@ class TransformFlowBlock(nn.Module):
 def check_reverse(cls):
     hidden_variables=[torch.rand(4,256,16,16),torch.rand(4,256,32,32),torch.rand(4,256,64,64)]
     dims=[i.shape for i in hidden_variables]
-    trans=cls(dims)
+    if cls==TransformFlowBlock:
+        trans=cls((dims,))
+    else:
+        trans=cls(dims)
+    trans.eval()
     res,jac=trans(hidden_variables)
     res_r,jac_r=trans(res,rev=True)
     return [torch.all(torch.abs(hidden_variables[i]-res_r[i])<1e-2) for i in range(len(res))]
 
 if __name__=="__main__":
-    # hidden_variables=[torch.rand(4,256,16,16),torch.rand(4,256,32,32),torch.rand(4,256,64,64)]
-    # dims=[i.shape for i in hidden_variables]
+    hidden_variables=[torch.rand(4,256,16,16),torch.rand(4,256,32,32),torch.rand(4,256,64,64)]
+    dims=[i.shape for i in hidden_variables]
     # ffn=Normalize(256)
     # a,_=ffn(hidden_variables[1])
     # a_r,_=ffn(a,rev=True)
     # print(torch.all(torch.abs(a_r-hidden_variables[1])<1e-2))
     # print(check_reverse(TransformFlowBlock))
     # print()
-    ffn=FeedForward(5,5)
-    x=torch.rand(4,5,16,16)
-    ffn(x)
-    print()
+    # ffn=FeedForward(5,5)
+    # x=torch.rand(4,5,16,16)
+    # ffn(x)
+    # print()
+    print(check_reverse(TransformFlowBlock))
+    # model=TransformFlowBlock(dims)
+    # b,_=model(hidden_variables)
+    # c,_=model(b,rev=True)
+    # print(b[0]-c[0])

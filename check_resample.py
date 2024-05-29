@@ -5,7 +5,7 @@ import argparse
 import wandb
 
 from train import train
-from train_msAttnFlow import train_OurFlow
+from train_msAttnFlow import train_msAttnFlow
 def init_seeds(seed=0):
     random.seed(seed)
     np.random.seed(seed)
@@ -74,46 +74,39 @@ import json
 def main(c):
     c = parsing_args(c)
     init_seeds(seed=c.seed)
-    # c.class_names=["bottle"]
-    c.mode="train"
-    c.flow_name="msAttnFlow"
+    # c.class_names=["capsule"]
+    c.mode="test"
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
-    c.version_name=f"{c.flow_name}_pool421"
-    c.batch_size=4
+    c.version_name="attn_ffn_pool421_6blocks"
     print(c.class_names)
     results={}
     c.meta_epochs=50
     for class_name in c.class_names:
         c.class_name = class_name
-        c.eval_ckpt=f"work_dirs/{c.version_name}/mvtec/{c.class_name}/best_det_auroc.pt"
         print('-+'*5, class_name, '+-'*5)
         c.ckpt_dir = os.path.join(c.work_dir, c.version_name, c.dataset, c.class_name)
-        c.use_attn=True
+        c.use_attn=False
         c.use_conv=True
-        c.use_ffn=False
+        c.use_ffn=True
         c.use_norm=False
         c.attn_all=False
-        c.resample_args={"resample":False,
+        c.resample_args={"resample":True,
                           "thresholds":[0.4,0.5,0.6],
                           "stragety":"auto"}
-        c.num_transformer_blocks=4
-        c.pro_eval=False
-        det_auroc_obs,loc_auroc_obs,loc_pro_obs=train_OurFlow(c)
+        c.num_transformer_blocks=6
+
+        c.eval_ckpt=f"work_dirs2/{c.version_name}/mvtec/{c.class_name}/best_loc_auroc.pt"
+        det_auroc_obs,loc_auroc_obs,loc_pro_obs=train_msAttnFlow(c)
         
         result={"det_auroc":[det_auroc_obs.max_score,det_auroc_obs.max_epoch],
                 "loc_auroc":[loc_auroc_obs.max_score,loc_auroc_obs.max_epoch]}
         results[class_name]=result
 
-    if c.mode=="train":
-        loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
-        det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
-        results["average"]={"det_auroc":[det_ave,0],
-                            "loc_auroc":[loc_ave,0]}
-        with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"w") as fp:
-            json.dump(results,fp)
+    loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
+    det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
+    results["average"]={"det_auroc":[det_ave,0],
+                        "loc_auroc":[loc_ave,0]}
 
-    with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"r") as fp:
-        results=json.load(fp)
     print("loc auroc")
     print("|||")
     print("|---|---|")
@@ -124,6 +117,7 @@ def main(c):
     print("|---|---|")
     for k,v in results.items():
         print(f"|{k}|{round(v['det_auroc'][0],4)}|")
+
 
 
 

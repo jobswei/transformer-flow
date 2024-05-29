@@ -1,4 +1,6 @@
-from .transformer_blocks import *
+import sys
+sys.path.append("/home/xiaomi/transformer-flow")
+from models.transformer_flow_blocks.transformer_blocks import *
 
 
 import FrEIA.modules as Fm
@@ -16,7 +18,7 @@ import torch.nn as nn
 
 
 class MSAttnFlowBlock(nn.Module):
-    def __init__(self,variable_dims:tuple[tuple[int]],use_attn=True,attn_block=None,
+    def __init__(self,variable_dims:tuple[tuple[tuple[int]]],use_attn=True,attn_block=None,
                  use_ffn=False,use_norm=False,
                  **kwargs) -> None:
         super().__init__()
@@ -33,11 +35,14 @@ class MSAttnFlowBlock(nn.Module):
             self.attn_block=attn_block(self.variable_dims)
         if self.use_ffn:
             self.ffn=FeedForward(self.variable_dims[0][1],self.variable_dims[0][1])
+            # self.ffn=InvConv2dLU(self.variable_dims[0][1])
         if self.use_norm:
             self.norm=Normalize(self.variable_dims[0][1])
     def output_dims(self,dim_in):
         return dim_in
     def forward(self,hidden_variables:list[torch.tensor],c=[],jac:bool=True,rev:bool=False):
+        if rev:
+            return self.forward_rev(hidden_variables,c,jac)
         h=[]
         jac_lis=[]
         for i,x in enumerate(hidden_variables):
@@ -55,6 +60,20 @@ class MSAttnFlowBlock(nn.Module):
             res,norm_jac=self.norm_forward(res)
             jac_lis+=norm_jac
         return res,jac_lis
+    def forward_rev(self,features:list[torch.tensor],c=[],jac:bool=True):
+        if self.use_norm:
+            features,norm_jac=self.norm_forward(features,rev=True)
+            # jac_lis+=norm_jac
+        if self.use_ffn:
+            features,ffn_jac=self.ffn_forward(features,rev=True)
+            # jac_lis+=ffn_jac
+        if self.use_attn:
+            features,attn_jac=self.attn_block(features,rev=True)
+        res=[]
+        for i,x in enumerate(features):
+            y,jac=self.flow_blocks[i]((x,),[c[0][i]],rev=True,jac=jac)
+            res.append(y[0])
+        return res,0
     def ffn_forward(self,x,rev=False):
         jac_lis=[]
         results=[]
@@ -71,3 +90,17 @@ class MSAttnFlowBlock(nn.Module):
             results.append(attn)
             jac_lis.append(ffn_log_jac)
         return results,torch.stack(jac_lis,dim=0)
+
+if __name__=="__main__":
+    from models.flow_models import *
+    models=[MSAttnFlowBlock(([[3,592,16,16],[3,592,32,32]],),attn_block=AttentionTD,dims_c=[(64,1,1)],subnet_constructor=subnet_conv_ln,affine_clamping=1.9,global_affine_type='SOFTPLUS',use_attn=True,use_ffn=False,use_norm=False,)\
+            for _ in range(6)]
+    x=[255*torch.rand([3,592,16,16]),255*torch.rand([3,592,32,32])]
+    cond=[torch.rand([3,64,16,16]),torch.rand([3,64,32,32])]
+    y=x
+    for model in models:
+        y,_=model(y,(cond,))
+    z=y
+    for model in models[::-1]:
+        z,_=model(z,(cond,),rev=True)
+    print()
