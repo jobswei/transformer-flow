@@ -144,7 +144,7 @@ class DAttentionBaseline(nn.Module):
 
     def __init__(
         self, q_size:tuple[int], kv_size:tuple[int],
-        n_heads:int, n_head_channels:int, n_groups:int,
+        n_heads:int, q_n_head_channels:int,kv_n_head_channels:int, n_groups:int,
         stride:int,ksize:int,
         attn_drop:float=0.0, proj_drop:float=0.0, 
         no_off:bool=False,offset_range_factor:int=-1, 
@@ -165,15 +165,18 @@ class DAttentionBaseline(nn.Module):
 
         super().__init__()
         self.dwc_pe = dwc_pe
-        self.n_head_channels = n_head_channels
-        self.scale = self.n_head_channels ** -0.5
+        self.q_n_head_channels = q_n_head_channels
+        self.kv_n_head_channels = kv_n_head_channels
+        self.scale = self.q_n_head_channels ** -0.5
         self.n_heads = n_heads
         self.q_h, self.q_w = q_size
         self.kv_h, self.kv_w = kv_size
         # self.kv_h, self.kv_w = self.q_h // stride, self.q_w // stride
-        self.nc = n_head_channels * n_heads
+        self.q_nc = q_n_head_channels * n_heads
+        self.kv_nc = kv_n_head_channels * n_heads
         self.n_groups = n_groups
-        self.n_group_channels = self.nc // self.n_groups
+        self.q_n_group_channels = self.q_nc // self.n_groups
+        self.kv_n_group_channels = self.kv_nc // self.n_groups
         self.n_group_heads = self.n_heads // self.n_groups
         self.use_pe = use_pe
         self.fixed_pe = fixed_pe
@@ -186,32 +189,32 @@ class DAttentionBaseline(nn.Module):
         pad_size = kk // 2 if kk != stride else 0
 
         self.conv_offset = nn.Sequential(
-            nn.Conv2d(self.n_group_channels, self.n_group_channels, kk, stride, pad_size, groups=self.n_group_channels),
-            LayerNormProxy(self.n_group_channels),
+            nn.Conv2d(self.q_n_group_channels, self.q_n_group_channels, kk, stride, pad_size, groups=self.q_n_group_channels),
+            LayerNormProxy(self.q_n_group_channels),
             nn.GELU(),
-            nn.Conv2d(self.n_group_channels, 2, 1, 1, 0, bias=False)
+            nn.Conv2d(self.q_n_group_channels, 2, 1, 1, 0, bias=False)
         )
         if self.no_off:
             for m in self.conv_offset.parameters():
                 m.requires_grad_(False)
 
         self.proj_q = nn.Conv2d(
-            self.nc, self.nc,
+            self.q_nc, self.q_nc,
             kernel_size=1, stride=1, padding=0
         )
 
         self.proj_k = nn.Conv2d(
-            self.nc, self.nc,
+            self.kv_nc, self.q_nc,
             kernel_size=1, stride=1, padding=0
         )
 
         self.proj_v = nn.Conv2d(
-            self.nc, self.nc,
+            self.kv_nc, self.q_nc,
             kernel_size=1, stride=1, padding=0
         )
 
         self.proj_out = nn.Conv2d(
-            self.nc, self.nc,
+            self.q_nc, self.q_nc,
             kernel_size=1, stride=1, padding=0
         )
 
@@ -221,7 +224,7 @@ class DAttentionBaseline(nn.Module):
         if self.use_pe and not self.no_off:
             if self.dwc_pe:
                 self.rpe_table = nn.Conv2d(
-                    self.nc, self.nc, kernel_size=3, stride=1, padding=1, groups=self.nc)
+                    self.q_nc, self.q_nc, kernel_size=3, stride=1, padding=1, groups=self.q_nc)
             elif self.fixed_pe:
                 self.rpe_table = nn.Parameter(
                     torch.zeros(self.n_heads, self.q_h * self.q_w, self.kv_h * self.kv_w)
@@ -274,12 +277,12 @@ class DAttentionBaseline(nn.Module):
 
     def forward(self, q,kv):
 
-        B, C, H, W = q.size()
-        B, C, H_kv, W_kv = kv.size()
+        B, q_C, H, W = q.size()
+        B, kv_C, H_kv, W_kv = kv.size()
         dtype, device = q.dtype, q.device
 
         q = self.proj_q(q)
-        q_off = einops.rearrange(q, 'b (g c) h w -> (b g) c h w', g=self.n_groups, c=self.n_group_channels)
+        q_off = einops.rearrange(q, 'b (g c) h w -> (b g) c h w', g=self.n_groups, c=self.q_n_group_channels)
         offset = self.conv_offset(q_off).contiguous()  # B * g 2 Hg Wg
         Hk, Wk = offset.size(2), offset.size(3)
         n_sample = Hk * Wk
@@ -304,16 +307,16 @@ class DAttentionBaseline(nn.Module):
             assert x_sampled.size(2) == Hk and x_sampled.size(3) == Wk, f"Size is {x_sampled.size()}"
         else:
             x_sampled = F.grid_sample(
-                input=kv.reshape(B * self.n_groups, self.n_group_channels, H_kv, W_kv), 
+                input=kv.reshape(B * self.n_groups, self.kv_n_group_channels, H_kv, W_kv), 
                 grid=pos[..., (1, 0)], # y, x -> x, y
                 mode='bilinear', align_corners=True) # B * g, Cg, Hg, Wg
                 
 
-        x_sampled = x_sampled.reshape(B, C, 1, n_sample)
+        x_sampled = x_sampled.reshape(B, kv_C, 1, n_sample)
 
-        q = q.reshape(B * self.n_heads, self.n_head_channels, H * W)
-        k = self.proj_k(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)
-        v = self.proj_v(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)
+        q = q.reshape(B * self.n_heads, self.q_n_head_channels, H * W)
+        k = self.proj_k(x_sampled).reshape(B * self.n_heads, self.q_n_head_channels, n_sample)
+        v = self.proj_v(x_sampled).reshape(B * self.n_heads, self.q_n_head_channels, n_sample)
 
         attn = torch.einsum('b c m, b c n -> b m n', q, k) # B * h, HW, Ns
         attn = attn.mul(self.scale)
@@ -321,7 +324,7 @@ class DAttentionBaseline(nn.Module):
         if self.use_pe and (not self.no_off):
 
             if self.dwc_pe:
-                residual_lepe = self.rpe_table(q.reshape(B, C, H, W)).reshape(B * self.n_heads, self.n_head_channels, H * W)
+                residual_lepe = self.rpe_table(q.reshape(B, q_C, H, W)).reshape(B * self.n_heads, self.q_n_head_channels, H * W)
             elif self.fixed_pe:
                 rpe_table = self.rpe_table
                 attn_bias = rpe_table[None, ...].expand(B, -1, -1, -1)
@@ -352,7 +355,7 @@ class DAttentionBaseline(nn.Module):
 
         if self.use_pe and self.dwc_pe:
             out = out + residual_lepe
-        out = out.reshape(B, C, H, W)
+        out = out.reshape(B, q_C, H, W)
 
         y = self.proj_drop(self.proj_out(out))
 
@@ -367,11 +370,19 @@ if __name__=="__main__":
     ksize, stride: 使用卷积根据q计算offset时，卷积核大小与步长
 
     """
-    dat=DAttentionBaseline(q_size=(64,64),kv_size=(32,32),n_heads=4,n_head_channels=256//4, n_groups=1,
-                           attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
-                           use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
-                           ksize=4,log_cpb=False)
-    q=torch.rand(4, 256, 64,64)
+    # dat=DAttentionBaseline(q_size=(64,64),kv_size=(32,32),n_heads=4,n_head_channels=256//4, n_groups=1,
+    #                        attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
+    #                        use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
+    #                        ksize=4,log_cpb=False)
+    q_size=(16,16)
+    kv_size=(32,32)
+    q_c=128
+    kv_c=256
+    dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,q_n_head_channels=q_c//4,kv_n_head_channels=kv_c//4, n_groups=1,\
+                                    attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, \
+                                    use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,\
+                                    ksize=4,log_cpb=False)
+    q=torch.rand(4, 128, 16,16)
     kv=torch.rand(4,256,32,32)
     out=dat(q,kv)
-    # print(out.shape)
+    print(out.shape)

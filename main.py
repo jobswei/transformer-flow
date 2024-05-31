@@ -74,11 +74,11 @@ import json
 def main(c):
     c = parsing_args(c)
     init_seeds(seed=c.seed)
-    # c.class_names=["bottle"]
+    # c.class_names=["transistor"]
     c.mode="train"
     c.flow_name="msAttnFlow"
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
-    c.version_name=f"{c.flow_name}_pool421"
+    c.version_name=f"{c.flow_name}_pool421_allChannel_noNeck"
     c.batch_size=4
     print(c.class_names)
     results={}
@@ -89,10 +89,11 @@ def main(c):
         print('-+'*5, class_name, '+-'*5)
         c.ckpt_dir = os.path.join(c.work_dir, c.version_name, c.dataset, c.class_name)
         c.use_attn=True
-        c.use_conv=True
+        c.use_conv=False
         c.use_ffn=False
         c.use_norm=False
         c.attn_all=False
+        c.use_all_channels=True
         c.resample_args={"resample":False,
                           "thresholds":[0.4,0.5,0.6],
                           "stragety":"auto"}
@@ -114,6 +115,7 @@ def main(c):
 
     with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"r") as fp:
         results=json.load(fp)
+    print(c.version_name)
     print("loc auroc")
     print("|||")
     print("|---|---|")

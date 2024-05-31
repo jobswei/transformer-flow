@@ -19,6 +19,7 @@ from evaluations import eval_det_loc
 import tqdm
 def get_pool_layer(c):
     if c.pool_type == 'avg':
+        # pool_layer = nn.AvgPool2d(2,2,0)
         # pool_layer = nn.AvgPool2d(3, 2, 1)
         pool_layer = nn.AvgPool2d(4, 2, 1)
         # pool_layer=nn.Identity()
@@ -236,7 +237,7 @@ def train_OurFlow(c):
     #     for idx, parallel_flow in enumerate(parallel_flows):
     #         wandb.watch(parallel_flow, log='all', log_freq=100, idx=idx)
     #     wandb.watch(fusion_flow, log='all', log_freq=100, idx=len(parallel_flows))
-    params = list(fusion_flow.parameters())+list(msAttn_flow.parameters())
+    params = list(conv_neck.parameters())+list(fusion_flow.parameters())+list(msAttn_flow.parameters())
         
     optimizer = torch.optim.Adam(params, lr=c.lr)
     if c.amp_enable:
@@ -317,10 +318,10 @@ def train_OurFlow(c):
             )
 
         # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'last', c.ckpt_dir, optimizer)
-        if best_det_auroc and c.mode == 'train':
-            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
-        if best_loc_auroc and c.mode == 'train':
-            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
+        # if best_det_auroc and c.mode == 'train':
+        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
+        # if best_loc_auroc and c.mode == 'train':
+        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
         # if best_loc_pro and c.mode == 'train':
         #     save_weights(epoch, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
         import os.path as osp

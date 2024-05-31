@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/xiaomi/transformer-flow")
+sys.path.append("/root/transformer-flow")
 from models.transformer_flow_blocks.transformer_blocks import *
 
 
@@ -18,7 +18,7 @@ import torch.nn as nn
 
 
 class MSAttnFlowBlock(nn.Module):
-    def __init__(self,variable_dims:tuple[tuple[tuple[int]]],use_attn=True,attn_block=None,
+    def __init__(self,variable_dims:tuple[tuple[tuple[int]]],use_attn=True,use_all_channels=False,attn_block=None,
                  use_ffn=False,use_norm=False,
                  **kwargs) -> None:
         super().__init__()
@@ -32,7 +32,7 @@ class MSAttnFlowBlock(nn.Module):
             flow_block=Fm.AllInOneBlock(dims_in,**kwargs)
             self.flow_blocks.append(flow_block)
         if self.use_attn:
-            self.attn_block=attn_block(self.variable_dims)
+            self.attn_block=attn_block(self.variable_dims,use_all_channels)
         if self.use_ffn:
             self.ffn=FeedForward(self.variable_dims[0][1],self.variable_dims[0][1])
             # self.ffn=InvConv2dLU(self.variable_dims[0][1])
@@ -93,9 +93,9 @@ class MSAttnFlowBlock(nn.Module):
 
 if __name__=="__main__":
     from models.flow_models import *
-    models=[MSAttnFlowBlock(([[3,592,16,16],[3,592,32,32]],),attn_block=AttentionTD,dims_c=[(64,1,1)],subnet_constructor=subnet_conv_ln,affine_clamping=1.9,global_affine_type='SOFTPLUS',use_attn=True,use_ffn=False,use_norm=False,)\
+    models=[MSAttnFlowBlock(([[3,256,16,16],[3,128,32,32]],),attn_block=AttentionTD,use_all_channels=True,dims_c=[(64,1,1)],subnet_constructor=subnet_conv_ln,affine_clamping=1.9,global_affine_type='SOFTPLUS',use_attn=True,use_ffn=False,use_norm=False,)\
             for _ in range(6)]
-    x=[255*torch.rand([3,592,16,16]),255*torch.rand([3,592,32,32])]
+    x=[255*torch.rand([3,256,16,16]),255*torch.rand([3,128,32,32])]
     cond=[torch.rand([3,64,16,16]),torch.rand([3,64,32,32])]
     y=x
     for model in models:
@@ -103,4 +103,4 @@ if __name__=="__main__":
     z=y
     for model in models[::-1]:
         z,_=model(z,(cond,),rev=True)
-    print()
+    print(z[0]-x[0])

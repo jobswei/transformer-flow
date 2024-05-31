@@ -8,15 +8,20 @@ sys.path.append("/home/xiaomi/transformer-flow")
 from models.transformer_flow_blocks.DAT import DAttentionBaseline
 
 class AttentionTD(nn.Module):
-    def __init__(self, variable_dims:list[tuple[int]],) -> None:
+    def __init__(self, variable_dims:list[tuple[int]],use_all_channels=False) -> None:
         super().__init__()
+        self.use_all_channels=use_all_channels
         self.dat_blocks=nn.ModuleList()
         for i  in range(len(variable_dims)):
             for j in range(i):
                 q_size=(variable_dims[i][-2],variable_dims[i][-1])
                 kv_size=(variable_dims[j][-2],variable_dims[j][-1])
-                c=variable_dims[i][-3]//2
-                dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,n_head_channels=c//4, n_groups=1,
+                q_c=variable_dims[i][-3]//2
+                kv_c=variable_dims[j][-3]
+                if not self.use_all_channels:
+                    assert variable_dims[i][-3]==variable_dims[j][-3]
+                    kv_c=kv_c//2
+                dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,q_n_head_channels=q_c//4, kv_n_head_channels=kv_c//4, n_groups=1,
                                 attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
                                 use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
                                 ksize=4,log_cpb=False)
@@ -24,16 +29,20 @@ class AttentionTD(nn.Module):
     def forward(self,hidden_variables:list[torch.Tensor],rev=False):
         b,c,h,w=hidden_variables[0].shape
         results=[]
-        c1=hidden_variables[0].shape[1]//2
-        c2=hidden_variables[0].shape[1]-c1
         num=0
         for i in range(len(hidden_variables)):
+            q_c1=hidden_variables[i].shape[1]//2
+            q_c2=hidden_variables[i].shape[1]-q_c1
             res=hidden_variables[i].clone()
             for j in range(i):
-                q=hidden_variables[i][:,:c1,...]
-                kv=results[j][:,:c1,...] if rev else hidden_variables[j][:,:c1,...]
+                kv_c1=hidden_variables[j].shape[1]//2
+                # kv_c2=hidden_variables[i].shape[1]-kv_c1
+                q=hidden_variables[i][:,:q_c1,...]
+                kv=results[j][:,:,...] if rev else hidden_variables[j][:,:,...]
+                if not self.use_all_channels:
+                    kv=results[j][:,:kv_c1,...] if rev else hidden_variables[j][:,:kv_c1,...]
                 attn,_,_=self.dat_blocks[num](q,kv)
-                attn=torch.cat((torch.zeros_like(res)[:,:c2,...],attn),dim=1)
+                attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],attn),dim=1)
                 res-=attn if rev else -1*attn
                 num+=1
             results.append(res)
@@ -41,16 +50,21 @@ class AttentionTD(nn.Module):
 
 
 class AttentionBU(nn.Module):
-    def __init__(self, variable_dims:list[tuple[int]],) -> None:
+    def __init__(self, variable_dims:list[tuple[int]],use_all_channels=False) -> None:
         super().__init__()
+        self.use_all_channels=use_all_channels
         variable_dims.reverse()
         self.dat_blocks=nn.ModuleList()
         for i  in range(len(variable_dims)):
             for j in range(i):
                 q_size=(variable_dims[i][-2],variable_dims[i][-1])
                 kv_size=(variable_dims[j][-2],variable_dims[j][-1])
-                c=variable_dims[i][-3]//2
-                dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,n_head_channels=c//4, n_groups=1,
+                q_c=variable_dims[i][-3]//2
+                kv_c=variable_dims[j][-3]
+                if not self.use_all_channels:
+                    assert variable_dims[i][-3]==variable_dims[j][-3]
+                    kv_c=kv_c//2
+                dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,q_n_head_channels=q_c//4, kv_n_head_channels=kv_c//4, n_groups=1,
                                 attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
                                 use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
                                 ksize=4,log_cpb=False)
@@ -58,17 +72,20 @@ class AttentionBU(nn.Module):
     def forward(self,hidden_variables:list[torch.Tensor],rev=False):
         b,c,h,w=hidden_variables[0].shape
         results=[]
-        c1=hidden_variables[0].shape[1]//2
-        c2=hidden_variables[0].shape[1]-c1
         hidden_variables.reverse()
         num=0
         for i in range(len(hidden_variables)):
+            q_c1=hidden_variables[i].shape[1]//2
+            q_c2=hidden_variables[i].shape[1]-q_c1
             res=hidden_variables[i].clone()
             for j in range(i):
-                q=hidden_variables[i][:,:c1,...]
-                kv=results[j][:,:c1,...] if rev else hidden_variables[j][:,:c1,...]
+                q=hidden_variables[i][:,:q_c1,...]
+                kv_c1=hidden_variables[j].shape[1]//2
+                kv=results[j][:,:,...] if rev else hidden_variables[j][:,:,...]
+                if not self.use_all_channels:
+                    kv=results[j][:,:kv_c1,...] if rev else hidden_variables[j][:,:kv_c1,...]
                 attn,_,_=self.dat_blocks[num](q,kv)
-                attn=torch.cat((torch.zeros_like(res)[:,:c2,...],attn),dim=1)
+                attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],attn),dim=1)
                 res-=attn if rev else -1*attn
                 num+=1
             results.append(res)
@@ -77,10 +94,10 @@ class AttentionBU(nn.Module):
         return results,torch.zeros(len(hidden_variables),b).to(hidden_variables[0].device)
 
 class AttentionAll(nn.Module):
-    def __init__(self,variable_dims:list[tuple[int]]) -> None:
+    def __init__(self,variable_dims:list[tuple[int]],use_all_channels=False) -> None:
         super().__init__()
-        self.attnTD=AttentionTD(variable_dims)
-        self.attnBU=AttentionBU(variable_dims)
+        self.attnTD=AttentionTD(variable_dims,use_all_channels)
+        self.attnBU=AttentionBU(variable_dims,use_all_channels)
     def forward(self,hidden_variables:list[torch.Tensor],rev=False) -> tuple[list[torch.Tensor],float]:
         if rev:
             bu_r,log_jac_bu=self.attnBU(hidden_variables,rev=rev)
@@ -93,30 +110,45 @@ class AttentionAll(nn.Module):
 class AttentionSelf(nn.Module):
     def __init__(self, variable_dims:list[tuple[int]],) -> None:
         super().__init__()
-        self.dat_blocks=nn.ModuleList()
+        self.scale_dat_blocks=nn.ModuleList()
+        self.trans_dat_blocks=nn.ModuleList()
         for i in range(len(variable_dims)):
             q_size=(variable_dims[i][-2],variable_dims[i][-1])
             kv_size=(variable_dims[i][-2],variable_dims[i][-1])
             c=variable_dims[i][-3]//2
-            dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,n_head_channels=c//4, n_groups=1,
+            scale_dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,q_n_head_channels=c//4,kv_n_head_channels=c//4, n_groups=1,
                                 attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
                                 use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
                                 ksize=4,log_cpb=False)
-            self.dat_blocks.append(dat)
+            trans_dat=DAttentionBaseline(q_size=q_size,kv_size=kv_size,n_heads=4,q_n_head_channels=c//4,kv_n_head_channels=c//4, n_groups=1,
+                                attn_drop=0, proj_drop=0, stride=4,offset_range_factor=-1, 
+                                use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
+                                ksize=4,log_cpb=False)
+            self.scale_dat_blocks.append(scale_dat)
+            self.trans_dat_blocks.append(trans_dat)
     def forward(self,hidden_variables:list[torch.Tensor],rev=False):
         b,c,h,w=hidden_variables[0].shape
         results=[]
-        c1=hidden_variables[0].shape[1]//2
-        c2=hidden_variables[0].shape[1]-c1
+        q_c1=hidden_variables[0].shape[1]//2
+        q_c2=hidden_variables[0].shape[1]-q_c1
+        jac_lis=[]
         for i in range(len(hidden_variables)):
             res=hidden_variables[i].clone()
-            q=hidden_variables[i][:,:c1,...]
-            kv=hidden_variables[i][:,:c1,...]
-            attn,_,_=self.dat_blocks[i](q,kv)
-            attn=torch.cat((torch.zeros_like(res)[:,:c2,...],attn),dim=1)
-            res-=attn if rev else -1*attn
+            q=hidden_variables[i][:,:q_c1,...]
+            kv=hidden_variables[i][:,:q_c1,...]
+            scale_attn,_,_=self.scale_dat_blocks[i](q,kv)
+            trans_attn,_,_=self.trans_dat_blocks[i](q,kv)
+
+            scale_attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],scale_attn),dim=1)
+            trans_attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],trans_attn),dim=1)
+            if rev:
+                res=(res-trans_attn)/torch.exp(scale_attn)
+                jac_lis.append(-1*torch.sum(scale_attn,dim=[-1,-2,-3]))
+            else:
+                res=res*torch.exp(scale_attn)+trans_attn
+                jac_lis.append(torch.sum(scale_attn,dim=[-1,-2,-3]))
             results.append(res)
-        return results,torch.zeros(len(hidden_variables),b).to(hidden_variables[0].device)
+        return results,torch.stack(jac_lis,dim=0)
 
 
 def PLU_matrix(dim):
