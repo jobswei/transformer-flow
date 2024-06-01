@@ -25,28 +25,32 @@ def build_transformer_flow_model(c, c_feats, all_dims):
     n_block = c.num_transformer_blocks
     clamp_alpha = c.clamp_alpha
 
-    mid_c=sum(c_feats)//len(c_feats)
-    mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
-    c_feats_new=[mid_c]*len(c_feats)
-    print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))
-    conv_neck=ConvNeck(c_feats,c_feats_new)
+    if c.use_conv:
+        mid_c=sum(c_feats)//len(c_feats)
+        mid_c=8*(mid_c//8)  # 和多头注意力的head对齐
+        c_feats_new=[mid_c]*len(c_feats)
+        print('Build Conv Neck: in_channels:{}, out_channels:{}'.format(c_feats, c_feats_new))
+        conv_neck=ConvNeck(c_feats,c_feats_new)
+        c_feats=c_feats_new
+        for i in all_dims:
+            i[1]=mid_c
+    else:
+        conv_neck=nn.Module()
 
-    print('Build transformer flow: channels:{}, block:{}, cond:{}'.format(c_feats_new, n_block, None))
-    for i in all_dims:
-        i[1]=mid_c
+    print('Build transformer flow: channels:{}, block:{}, cond:{}'.format(c_feats, n_block, None))
     transformer_flow=Ff.SequenceINN(*all_dims,force_tuple_output=True)
     for k in range(n_block):
-        transformer_flow.append(TransformFlowBlock)
+        transformer_flow.append(TransformFlowBlock,use_all_channels=c.use_all_channels)
 
-    print("Build fusion flow with channels", c_feats_new)
+    print("Build fusion flow with channels", c_feats)
     nodes = list()
-    n_inputs = len(c_feats_new)
-    for idx, c_feat in enumerate(c_feats_new):
+    n_inputs = len(c_feats)
+    for idx, c_feat in enumerate(c_feats):
         nodes.append(Ff.InputNode(c_feat, 1, 1, name='input{}'.format(idx)))
     for idx in range(n_inputs):
         nodes.append(Ff.Node(nodes[-n_inputs], Fm.PermuteRandom, {}, name='permute_{}'.format(idx)))
     nodes.append(Ff.Node([(nodes[-n_inputs+i], 0) for i in range(n_inputs)], FusionCouplingLayer, {'clamp': clamp_alpha}, name='fusion flow'))
-    for idx, c_feat in enumerate(c_feats_new):
+    for idx, c_feat in enumerate(c_feats):
         nodes.append(Ff.OutputNode(eval('nodes[-idx-1].out{}'.format(idx)), name='output_{}'.format(idx)))
     fusion_flow = Ff.GraphINN(nodes)
 
@@ -80,7 +84,7 @@ def build_ms_attn_flow_model(c, c_feats, all_dims):
             else:
                 attn_block=AttentionTD
         msAttn_flow.append(MSAttnFlowBlock,cond=0,cond_shape=(c_conds[0],1,1),
-                        use_attn=c.use_attn,use_all_channels=c.use_all_channels,use_ffn=c.use_ffn,use_norm=c.use_norm,
+                        use_attn=c.use_attn,use_all_channels=c.use_all_channels,use_ffn=c.use_ffn,ffn_residual=c.ffn_residual,use_norm=c.use_norm,reverse_blocks=c.reverse_blocks,
                         attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
 
     print("Build fusion flow with channels", c_feats)

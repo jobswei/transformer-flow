@@ -15,6 +15,8 @@ def init_seeds(seed=0):
 
 def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
+    # parser.add_argument('flow_name', type=str, 
+    #                      help='flow model name')
     parser.add_argument('--dataset', default='mvtec', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
@@ -78,7 +80,8 @@ def main(c):
     c.mode="train"
     c.flow_name="msAttnFlow"
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
-    c.version_name=f"{c.flow_name}_pool421_allChannel_noNeck"
+    # c.version_name=f"{c.flow_name}_transistor"
+    c.version_name=f"{c.flow_name}_pool421_allChannel_noNeck_8blocks"
     c.batch_size=4
     print(c.class_names)
     results={}
@@ -91,13 +94,15 @@ def main(c):
         c.use_attn=True
         c.use_conv=False
         c.use_ffn=False
+        c.ffn_residual=False
         c.use_norm=False
         c.attn_all=False
         c.use_all_channels=True
+        c.reverse_blocks=False
         c.resample_args={"resample":False,
                           "thresholds":[0.4,0.5,0.6],
                           "stragety":"auto"}
-        c.num_transformer_blocks=4
+        c.num_transformer_blocks=8
         c.pro_eval=False
         det_auroc_obs,loc_auroc_obs,loc_pro_obs=train_OurFlow(c)
         

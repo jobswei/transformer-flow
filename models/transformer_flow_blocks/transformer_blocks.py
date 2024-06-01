@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import numpy as np
 import sys
 from scipy import linalg as la
-sys.path.append("/home/xiaomi/transformer-flow")
+sys.path.append("/root/transformer-flow")
 from models.transformer_flow_blocks.DAT import DAttentionBaseline
 
 class AttentionTD(nn.Module):
@@ -69,6 +69,7 @@ class AttentionBU(nn.Module):
                                 use_pe=True,dwc_pe=False,no_off=False,fixed_pe=False,
                                 ksize=4,log_cpb=False)
                 self.dat_blocks.append(dat)
+        variable_dims.reverse()
     def forward(self,hidden_variables:list[torch.Tensor],rev=False):
         b,c,h,w=hidden_variables[0].shape
         results=[]
@@ -108,8 +109,9 @@ class AttentionAll(nn.Module):
         return resBU,(log_jac_bu+log_jac_td)
 
 class AttentionSelf(nn.Module):
-    def __init__(self, variable_dims:list[tuple[int]],) -> None:
+    def __init__(self, variable_dims:list[tuple[int]],scale_clamp=2.0) -> None:
         super().__init__()
+        self.scale_clamp=scale_clamp
         self.scale_dat_blocks=nn.ModuleList()
         self.trans_dat_blocks=nn.ModuleList()
         for i in range(len(variable_dims)):
@@ -129,15 +131,16 @@ class AttentionSelf(nn.Module):
     def forward(self,hidden_variables:list[torch.Tensor],rev=False):
         b,c,h,w=hidden_variables[0].shape
         results=[]
-        q_c1=hidden_variables[0].shape[1]//2
-        q_c2=hidden_variables[0].shape[1]-q_c1
         jac_lis=[]
         for i in range(len(hidden_variables)):
             res=hidden_variables[i].clone()
+            q_c1=res.shape[1]//2
+            q_c2=res.shape[1]-q_c1
             q=hidden_variables[i][:,:q_c1,...]
             kv=hidden_variables[i][:,:q_c1,...]
             scale_attn,_,_=self.scale_dat_blocks[i](q,kv)
             trans_attn,_,_=self.trans_dat_blocks[i](q,kv)
+            scale_attn=self.scale_clamp*torch.tanh(trans_attn/self.scale_clamp)
 
             scale_attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],scale_attn),dim=1)
             trans_attn=torch.cat((torch.zeros_like(res)[:,:q_c2,...],trans_attn),dim=1)
@@ -177,71 +180,51 @@ def PLU_matrix(dim):
 
     return p,l,u,sign_s,log_s
 
-class FeedForward(nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(FeedForward, self).__init__()
-        assert input_dim==output_dim
-        self.p,self.l,self.u,self.sign_s,self.log_s=tuple(map(lambda x:nn.Parameter(x),PLU_matrix(input_dim)))
-        self.p.requires_grad=False
-        self.sign_s.requires_grad=False
+# class FeedForward(nn.Module):
+#     def __init__(self, input_dim, output_dim):
+#         super(FeedForward, self).__init__()
+#         assert input_dim==output_dim
+#         self.p,self.l,self.u,self.sign_s,self.log_s=tuple(map(lambda x:nn.Parameter(x),PLU_matrix(input_dim)))
+#         self.p.requires_grad=False
+#         self.sign_s.requires_grad=False
 
-        # self.linear = nn.Linear(input_dim, output_dim)
+#         # self.linear = nn.Linear(input_dim, output_dim)
 
-    def forward(self, x:torch.Tensor,rev=False) -> tuple[torch.Tensor,float]:
-        b,c,h,w=x.shape
-        x=x.permute(0,2,1,3)
+#     def forward(self, x:torch.Tensor,rev=False) -> tuple[torch.Tensor,float]:
+#         b,c,h,w=x.shape
+#         x=x.permute(0,2,1,3)
 
-        log_jac=torch.repeat_interleave(torch.sum(self.log_s),repeats=b)*h*w
+#         log_jac=torch.repeat_interleave(torch.sum(self.log_s),repeats=b)*h*w
 
-        # 优化之后，plu就不是标准的上、下三角了，要变化一下
-        w_shape=tuple(self.l.shape)
-        dtype=self.l.dtype
-        device=self.l.device
-        l_mask=torch.tril(torch.ones(w_shape),diagonal=-1).to(device)
-        l=self.l*l_mask+torch.eye(w_shape[0],dtype=dtype).to(device)
-        u=self.u*torch.transpose(l_mask,0,1)+torch.diag(self.sign_s*torch.exp(self.log_s))
+#         # 优化之后，plu就不是标准的上、下三角了，要变化一下
+#         w_shape=tuple(self.l.shape)
+#         dtype=self.l.dtype
+#         device=self.l.device
+#         l_mask=torch.tril(torch.ones(w_shape),diagonal=-1).to(device)
+#         l=self.l*l_mask+torch.eye(w_shape[0],dtype=dtype).to(device)
+#         u=self.u*torch.transpose(l_mask,0,1)+torch.diag(self.sign_s*torch.exp(self.log_s))
 
-        if rev:
-            p_inv=torch.inverse(self.p)
-            l_inv=torch.inverse(l,)
-            u_inv=torch.inverse(u)
-            w_inv=torch.matmul(u_inv,torch.matmul(l_inv,p_inv)).to(x.dtype)
-            x_rev=torch.matmul(w_inv,x)
-            x_rev=x_rev.permute(0,2,1,3)
-            return x_rev,-log_jac
+#         if rev:
+#             p_inv=torch.inverse(self.p)
+#             l_inv=torch.inverse(l,)
+#             u_inv=torch.inverse(u)
+#             w_inv=torch.matmul(u_inv,torch.matmul(l_inv,p_inv)).to(x.dtype)
+#             x_rev=torch.matmul(w_inv,x)
+#             x_rev=x_rev.permute(0,2,1,3)
+#             return x_rev,-log_jac
 
-        w=torch.matmul(self.p,torch.matmul(l,u)).to(x.dtype)
-        x=torch.matmul(w,x)
-        x=x.permute(0,2,1,3)
-        return x,log_jac
-    
-
-class VolumeNorm(nn.Module):
-    """
-        Volume Normalization.
-        CVN dims = (0,1);  SVN dims = (0,2,3)
-    """
-    def __init__(self, dims=(0,1) ):
-        super().__init__()
-        self.register_buffer('running_mean', torch.zeros(1,1,1,1))
-        self.momentum = 0.1
-        self.dims = dims
-    def forward(self, x):
-        if self.training:
-            sample_mean = torch.mean(x, dim=self.dims, keepdim=True) 
-            self.running_mean = (1-self.momentum) * self.running_mean + self.momentum * sample_mean
-            out = x - sample_mean
-        else:
-            out = x - self.running_mean
-        return out
-
+#         w=torch.matmul(self.p,torch.matmul(l,u)).to(x.dtype)
+#         x=torch.matmul(w,x)
+#         x=x.permute(0,2,1,3)
+#         return x,log_jac
 
 class InvConv2dLU(nn.Module):
     """
         Invertible 1x1Conv with volume normalization.
     """
-    def __init__(self, in_channel, volumeNorm=False):
+    def __init__(self, in_channel, residual=False, volumeNorm=False):
         super().__init__()
+        self.residual = residual
         self.volumeNorm = volumeNorm
         weight = np.random.randn(in_channel, in_channel)
         q, _ = la.qr(weight)
@@ -268,19 +251,22 @@ class InvConv2dLU(nn.Module):
     def forward(self, input, rev=False):
         if rev:
             return self.inverse(input)
-        batch, channel, height, width = input.shape
-        weight,log_s = self.calc_weight()
+        batch, _, height, width = input.shape
+        weight, log_s = self.calc_weight()
         out = F.conv2d(input, weight)
         log_jac=torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
-        return out,log_jac
+        if self.residual:
+            return out + input, log_jac
+        return out, log_jac
 
     def inverse(self, output):
-        batch, channel, height, width = output.shape
-        weight,log_s = self.calc_weight()
-        inv_weight = torch.inverse(weight.squeeze().double()).float()
-        input = F.conv2d(output, inv_weight.unsqueeze(2).unsqueeze(3))
-        log_jac=-1*torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
-        return input,log_jac
+        raise NotImplementedError
+        # batch, _, height, width = output.shape
+        # weight, log_s = self.calc_weight()
+        # inv_weight = torch.inverse(weight.squeeze().double()).float()
+        # input = F.conv2d(output, inv_weight.unsqueeze(2).unsqueeze(3))
+        # log_jac=-torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
+        # return input, log_jac
 
     def calc_weight(self):
         if self.volumeNorm:
@@ -292,8 +278,103 @@ class InvConv2dLU(nn.Module):
             @ (self.w_l * self.l_mask + self.l_eye)
             @ ((self.w_u * self.u_mask) + torch.diag(self.s_sign * torch.exp(w_s)))
         )
-        log_s=torch.log(torch.abs(w_s))
-        return weight.unsqueeze(2).unsqueeze(3),log_s
+        log_s=torch.log(torch.abs((w_s + 1) if self.residual else w_s))
+        return weight.unsqueeze(2).unsqueeze(3), log_s
+    
+class FeedForward(nn.Module):
+    def __init__(self, variable_dims:list[tuple[int]], residual=False):
+        super(FeedForward, self).__init__()
+        self.ffn_list=nn.ModuleList()
+        for dim in variable_dims:
+            self.ffn_list.append(InvConv2dLU(dim[1], residual=residual))
+
+    def forward(self,hidden_variables,jac=True,rev=False):
+        res=[]
+        jac_lis=[]
+        for x,ffn in zip(hidden_variables,self.ffn_list):
+            y,jac=ffn(x)
+            res.append(y)
+            jac_lis.append(jac)
+        return res,torch.stack(jac_lis,dim=0)
+
+# class VolumeNorm(nn.Module):
+#     """
+#         Volume Normalization.
+#         CVN dims = (0,1);  SVN dims = (0,2,3)
+#     """
+#     def __init__(self, dims=(0,1) ):
+#         super().__init__()
+#         self.register_buffer('running_mean', torch.zeros(1,1,1,1))
+#         self.momentum = 0.1
+#         self.dims = dims
+#     def forward(self, x):
+#         if self.training:
+#             sample_mean = torch.mean(x, dim=self.dims, keepdim=True) 
+#             self.running_mean = (1-self.momentum) * self.running_mean + self.momentum * sample_mean
+#             out = x - sample_mean
+#         else:
+#             out = x - self.running_mean
+#         return out
+
+
+# class InvConv2dLU(nn.Module):
+#     """
+#         Invertible 1x1Conv with volume normalization.
+#     """
+#     def __init__(self, in_channel, volumeNorm=False):
+#         super().__init__()
+#         self.volumeNorm = volumeNorm
+#         weight = np.random.randn(in_channel, in_channel)
+#         q, _ = la.qr(weight)
+#         w_p, w_l, w_u = la.lu(q.astype(np.float32))
+#         w_s = np.diag(w_u)
+#         w_u = np.triu(w_u, 1)
+#         u_mask = np.triu(np.ones_like(w_u), 1)
+#         l_mask = u_mask.T
+
+#         w_p = torch.from_numpy(w_p.copy())
+#         w_l = torch.from_numpy(w_l.copy())
+#         w_s = torch.from_numpy(w_s.copy())
+#         w_u = torch.from_numpy(w_u.copy())
+
+#         self.register_buffer("w_p", w_p)
+#         self.register_buffer("u_mask", torch.from_numpy(u_mask))
+#         self.register_buffer("l_mask", torch.from_numpy(l_mask))
+#         self.register_buffer("s_sign", torch.sign(w_s))
+#         self.register_buffer("l_eye", torch.eye(l_mask.shape[0]))
+#         self.w_l = nn.Parameter(w_l)
+#         self.w_s = nn.Parameter(w_s.abs().log())
+#         self.w_u = nn.Parameter(w_u)
+
+#     def forward(self, input, rev=False):
+#         if rev:
+#             return self.inverse(input)
+#         batch, channel, height, width = input.shape
+#         weight,log_s = self.calc_weight()
+#         out = F.conv2d(input, weight)
+#         log_jac=torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
+#         return out,log_jac
+
+#     def inverse(self, output):
+#         batch, channel, height, width = output.shape
+#         weight,log_s = self.calc_weight()
+#         inv_weight = torch.inverse(weight.squeeze().double()).float()
+#         input = F.conv2d(output, inv_weight.unsqueeze(2).unsqueeze(3))
+#         log_jac=-1*torch.repeat_interleave(torch.sum(log_s),repeats=batch)*height*width
+#         return input,log_jac
+
+#     def calc_weight(self):
+#         if self.volumeNorm:
+#             w_s = self.w_s - self.w_s.mean() # volume normalization
+#         else:
+#             w_s = self.w_s
+#         weight = (
+#             self.w_p
+#             @ (self.w_l * self.l_mask + self.l_eye)
+#             @ ((self.w_u * self.u_mask) + torch.diag(self.s_sign * torch.exp(w_s)))
+#         )
+#         log_s=torch.log(torch.abs(w_s))
+#         return weight.unsqueeze(2).unsqueeze(3),log_s
 
 
 class Normalize(nn.Module):
@@ -314,13 +395,13 @@ class Normalize(nn.Module):
         self.paras={"var":self.norm.running_var.detach().clone(),"eps":self.norm.eps,"mean":self.norm.running_mean.detach().clone()}
 
 class TransformFlowBlock(nn.Module):
-    def __init__(self,variable_dims:tuple[tuple[tuple[int]]]) -> None:
+    def __init__(self,variable_dims:tuple[tuple[tuple[int]]],use_all_channels=False) -> None:
         super().__init__()
         self.variable_dims=list(variable_dims[0])
         self.self_attention=AttentionSelf(self.variable_dims)
-        self.attention=AttentionAll(self.variable_dims)
+        self.attention=AttentionAll(self.variable_dims,use_all_channels)
         # self.ffn=FeedForward(self.variable_dims[0][1],self.variable_dims[0][1])
-        self.ffn=InvConv2dLU(self.variable_dims[0][1])
+        self.ffn=FeedForward(self.variable_dims,residual=False)
         self.norm=Normalize(self.variable_dims[0][1])
     def output_dims(self,dim_in):
         return dim_in
@@ -329,11 +410,11 @@ class TransformFlowBlock(nn.Module):
         log_jacs=torch.zeros(len(hidden_variables),hidden_variables[0].shape[0]).to(hidden_variables[0].device)
         if rev:
             for num,attn in enumerate(hidden_variables):
-                attn,norm_log_jac=self.norm(attn,rev=True)
-                attn,ffn_log_jac=self.ffn(attn,rev=True)
+                # attn,norm_log_jac=self.norm(attn,rev=True)
                 results.append(attn)
-                log_jacs[num]+=(ffn_log_jac)
-                log_jacs[num]+=(norm_log_jac)
+                # log_jacs[num]+=(norm_log_jac)
+            attn,ffn_log_jac=self.ffn(attn,rev=True)
+            log_jacs+=ffn_log_jac
             results,attn_log_jac=self.attention(results,rev=True)
             log_jacs+=attn_log_jac
             results,self_attn_log_jac=self.self_attention(results,rev=True)
@@ -344,12 +425,12 @@ class TransformFlowBlock(nn.Module):
         log_jacs+=self_attn_log_jac
         attns,attn_log_jac=self.attention(self_attns)
         log_jacs+=attn_log_jac
+        attns,ffn_log_jac=self.ffn(attns)
+        log_jacs+=ffn_log_jac
         for num,attn in enumerate(attns):
-            attn,ffn_log_jac=self.ffn(attn)
-            attn,norm_log_jac=self.norm(attn)
+            # attn,norm_log_jac=self.norm(attn)
             results.append(attn)
-            log_jacs[num]+=(ffn_log_jac)
-            log_jacs[num]+=(norm_log_jac)
+            # log_jacs[num]+=(norm_log_jac)
         return results,log_jacs
 
 
