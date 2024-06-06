@@ -12,7 +12,16 @@ __all__ = ('MVTecDataset', )
 MVTEC_CLASS_NAMES = ['bottle', 'cable', 'capsule', 'carpet', 'grid',
                'hazelnut', 'leather', 'metal_nut', 'pill', 'screw',
                'tile', 'toothbrush', 'transistor', 'wood', 'zipper']
-
+class ConvertToSingleChannelBinary:
+    def __init__(self, threshold=0.5):
+        self.threshold = threshold
+    
+    def __call__(self, img):
+        # img 是一个 torch.Tensor，假设输入是3通道的灰度图像
+        if img.shape[0] == 3:
+            img = img.mean(dim=0, keepdim=True)  # 将三通道图像转换为单通道
+        binary_img = (img > self.threshold).float()  # 二值化
+        return binary_img
 class MVTecDataset(Dataset):
     def __init__(self, c, is_train=True):
         assert c.class_name in MVTEC_CLASS_NAMES, 'class_name: {}, should be in {}'.format(c.class_name, MVTEC_CLASS_NAMES)
@@ -122,7 +131,8 @@ class VisADataset(Dataset):
         # mask
         self.transform_mask = T.Compose([
             T.Resize(c.input_size, InterpolationMode.NEAREST),
-            T.ToTensor()])
+            T.ToTensor(),
+            ConvertToSingleChannelBinary(threshold=0.5)])
 
         self.normalize = T.Compose([T.Normalize(c.img_mean, c.img_std)])
 

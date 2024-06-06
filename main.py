@@ -17,7 +17,7 @@ def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
     # parser.add_argument('flow_name', type=str, 
     #                      help='flow model name')
-    parser.add_argument('--dataset', default='mvtec', type=str, 
+    parser.add_argument('--dataset', default='visa', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
                         help='train or test.')
@@ -65,7 +65,7 @@ def parsing_args(c):
             setattr(c, 'class_names', MVTEC_CLASS_NAMES)
     elif c.dataset == 'visa':
         from datasets import VISA_CLASS_NAMES
-        setattr(c, 'data_path', './data/VisA_pytorch/1cls')
+        setattr(c, 'data_path', './data/VisA_pytorch/')
         if c.class_names == ['all']:
             setattr(c, 'class_names', VISA_CLASS_NAMES)
         
@@ -81,7 +81,7 @@ def main(c):
     c.flow_name="msAttnFlow"
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"{c.flow_name}_pool421_allChannel_noNeck_8blocks"
+    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse"
     c.batch_size=4
     print(c.class_names)
     results={}
@@ -98,7 +98,7 @@ def main(c):
         c.use_norm=False
         c.attn_all=False
         c.use_all_channels=True
-        c.reverse_blocks=False
+        c.reverse_blocks=True
         c.resample_args={"resample":False,
                           "thresholds":[0.4,0.5,0.6],
                           "stragety":"auto"}
