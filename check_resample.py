@@ -57,12 +57,12 @@ def parsing_args(c):
         setattr(c, k, v)
     
     if c.dataset == 'mvtec':
-        from datasets import MVTEC_CLASS_NAMES
+        from datasets.datasets import MVTEC_CLASS_NAMES
         setattr(c, 'data_path', './data/MVTec')
         if c.class_names == ['all']:
             setattr(c, 'class_names', MVTEC_CLASS_NAMES)
     elif c.dataset == 'visa':
-        from datasets import VISA_CLASS_NAMES
+        from datasets.datasets import VISA_CLASS_NAMES
         setattr(c, 'data_path', './data/VisA_pytorch/1cls')
         if c.class_names == ['all']:
             setattr(c, 'class_names', VISA_CLASS_NAMES)

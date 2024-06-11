@@ -9,11 +9,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.cuda.amp import autocast, GradScaler
 
-from datasets import MVTecDataset, VisADataset
+from Datasets.datasets import MVTecDataset, VisADataset
+from Datasets.datasets_rotate import MVTecDatasetRotate
+from Datasets.datasets_diffusion import MVTecDatasetDiffusion
 from models.extractors import build_extractor
 from models.flow_models import *
 from post_process import post_process,post_process_resampled
-from utils import Score_Observer, t2np, positionalencoding2d, save_weights, load_weights
+from utils.utils import Score_Observer, t2np, positionalencoding2d, save_weights, load_weights
 from evaluations import eval_det_loc
 
 import tqdm
@@ -21,7 +23,7 @@ def get_pool_layer(c):
     if c.pool_type == 'avg':
         # pool_layer = nn.AvgPool2d(2,2,0)
         # pool_layer = nn.AvgPool2d(3, 2, 1)
-        pool_layer = nn.AvgPool2d(4, 2, 1)
+        pool_layer = nn.AvgPool2d(4,2,1)
         # pool_layer=nn.Identity()
     elif c.pool_type == 'max':
         pool_layer = nn.MaxPool2d(3, 2, 1)
@@ -113,6 +115,7 @@ def train_meta_epoch(c, epoch, loader, extractor, conv_neck,msAttn_flow, fusion_
         
 
 def inference_meta_epoch(c, epoch, loader,  extractor,conv_neck, msAttn_flow, fusion_flow):
+    conv_neck.eval()
     msAttn_flow=msAttn_flow.eval()
     fusion_flow = fusion_flow.eval()
     epoch_loss = 0.
@@ -120,7 +123,8 @@ def inference_meta_epoch(c, epoch, loader,  extractor,conv_neck, msAttn_flow, fu
     gt_label_list = list()
     gt_mask_list = list()
     # outputs_list = [list() for _ in range(1)]
-    outputs_list = [list() for _ in range(len(c.output_channels))]
+    outputs_lists = {"noflip":[list() for _ in range(len(c.output_channels))],
+                     "flip":[list() for _ in range(len(c.output_channels))]}
     hidden_variables = [list() for _ in range(len(c.output_channels))]
     size_list = []
     cond_list=[]
@@ -139,11 +143,19 @@ def inference_meta_epoch(c, epoch, loader,  extractor,conv_neck, msAttn_flow, fu
                 if idx == 0:
                     size_list.append(list(z.shape[-2:]))
                 logp = - 0.5 * torch.mean(z**2, 1)
-                outputs_list[lvl].append(logp)
+                outputs_lists["noflip"][lvl].append(logp)
                 loss += 0.5 * torch.sum(z**2, (1, 2, 3))
 
                 hidden_variables[lvl].append(z)
 
+            if c.post_augmentation:
+                image=image.flip(3)
+                z_list, jac,cond_lis = model_forward(c, extractor, conv_neck, msAttn_flow, fusion_flow, image)
+                for lvl, z in enumerate(z_list):
+                    z=z.flip(3)
+                    logp = - 0.5 * torch.mean(z**2, 1)
+                    outputs_lists["flip"][lvl].append(logp)
+                image=image.flip(3)
             loss = loss - jac
             loss = loss.mean()
             epoch_loss += t2np(loss)
@@ -155,7 +167,7 @@ def inference_meta_epoch(c, epoch, loader,  extractor,conv_neck, msAttn_flow, fu
             'Epoch {:d}   test loss: {:.3e}\tFPS: {:.1f}'.format(
                 epoch, mean_epoch_loss, fps))
 
-    return gt_label_list, gt_mask_list, outputs_list, size_list, hidden_variables,cond_list
+    return gt_label_list, gt_mask_list, outputs_lists, size_list, hidden_variables,cond_list
 def save_weights(epoch,conv_neck, msAttn_flow, fusion_flow, model_name, ckpt_dir, optimizer=None):
     if not os.path.exists(ckpt_dir):
         os.makedirs(ckpt_dir)
@@ -176,19 +188,20 @@ def load_weights(conv_neck,msAttn_flow,fusion_flow, ckpt_path, optimizer=None):
     state_dict = torch.load(ckpt_path)
     
     fusion_state = state_dict['fusion_flow']
-    # maps = {}
-    # for i in range(len(fusion_flow.module_list)):
-    #     try:
-    #         maps[fusion_flow.module_list[i].perm.shape[0]] = i
-    #     except:
-    #         continue
-    # temp = dict()
-    # for k, v in fusion_state.items():
-    #     if 'perm' not in k:
-    #         continue
-    #     temp[k.replace(k.split('.')[1], str(maps[v.2shape[0]]))] = v
-    # for k, v in temp.items():
-    #     fusion_state[k] = v
+    if isinstance(conv_neck , nn.Module):
+        maps = {}
+        for i in range(len(fusion_flow.module_list)):
+            try:
+                maps[fusion_flow.module_list[i].perm.shape[0]] = i
+            except:
+                continue
+        temp = dict()
+        for k, v in fusion_state.items():
+            if 'perm' not in k:
+                continue
+            temp[k.replace(k.split('.')[1], str(maps[v.shape[0]]))] = v
+        for k, v in temp.items():
+            fusion_state[k] = v
     fusion_flow.load_state_dict(fusion_state, strict=True)
     conv_neck.load_state_dict(state_dict['conv_neck'], strict=True)
     # for parallel_flow, state in zip(parallel_flows, state_dict['parallel_flows']):
@@ -199,7 +212,30 @@ def load_weights(conv_neck,msAttn_flow,fusion_flow, ckpt_path, optimizer=None):
 
     return state_dict['epoch']
 
+def test_flow(c,conv_neck,msAttn_flow, fusion_flow, extractor,test_loader, eval_ckpt,det_auroc_obs, loc_auroc_obs, loc_pro_obs):
+    start_epoch = load_weights(conv_neck,msAttn_flow, fusion_flow,eval_ckpt)
+    epoch = start_epoch + 1
+    gt_label_list, gt_mask_list, outputs_lists, size_list, hidden_variables,cond_list = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
 
+    if not c.post_augmentation:
+        outputs_lists=[outputs_lists["noflip"]]
+    else:
+        outputs_lists=list(outputs_lists.values())
+
+    results=[]
+    for outputs_list in outputs_lists:
+        if c.resample_args["resample"]:
+            res\
+                = post_process_resampled(c, size_list, outputs_list,
+                                        msAttn_flow,fusion_flow,hidden_variables,cond_list)
+        else:
+            res = post_process(c, size_list, outputs_list)
+        results.append(res)
+    y=lambda i:sum([res[i] for res in results])/len(results)
+    anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = y(0),y(1),y(2)
+    det_auroc, loc_auroc, loc_pro_auc, \
+        best_det_auroc, best_loc_auroc, best_loc_pro =  eval_det_loc(det_auroc_obs, loc_auroc_obs, loc_pro_obs, epoch, gt_label_list, anomaly_score, gt_mask_list, anomaly_score_map_add, anomaly_score_map_mul, c.pro_eval)
+    return det_auroc, loc_auroc, loc_pro_auc
 def train_OurFlow(c):
     
     if c.wandb_enable:
@@ -208,9 +244,14 @@ def train_OurFlow(c):
             project='65001-msflow', 
             group=c.version_name,
             name=c.class_name)
-    
-    Dataset = MVTecDataset if c.dataset == 'mvtec' else VisADataset
-
+    if c.peer_augmentation:
+        if c.peer_type=="1":
+            Dataset=MVTecDatasetRotate
+        else:
+            Dataset=MVTecDatasetDiffusion
+    else:
+        Dataset=MVTecDataset if c.dataset == 'mvtec' else VisADataset
+        
     train_dataset = Dataset(c, is_train=True)
     test_dataset  = Dataset(c, is_train=False)
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=c.batch_size, shuffle=True, num_workers=c.workers, pin_memory=True)
@@ -225,6 +266,7 @@ def train_OurFlow(c):
         image=[pool_layer(i) for i in image]
         dims=[list(i.shape) for i in image]
         break
+    output_channels=[i[1] for i in dims]
     c.output_channels=output_channels
     if c.flow_name=="msAttnFlow":
         conv_neck,msAttn_flow,fusion_flow=build_ms_attn_flow_model(c,output_channels,dims)
@@ -249,19 +291,14 @@ def train_OurFlow(c):
 
     start_epoch = 0
     if c.mode == 'test':
-        start_epoch = load_weights(conv_neck,msAttn_flow, fusion_flow, c.eval_ckpt)
-        epoch = start_epoch + 1
-        gt_label_list, gt_mask_list, outputs_list, size_list, hidden_variables,cond_list = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
-
-        if c.resample_args["resample"]:
-            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul \
-                = post_process_resampled(c, size_list, outputs_list,
-                                        msAttn_flow,fusion_flow,hidden_variables,cond_list)
-        else:
-            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = post_process(c, size_list, outputs_list)
-        det_auroc, loc_auroc, loc_pro_auc, \
-            best_det_auroc, best_loc_auroc, best_loc_pro =  eval_det_loc(det_auroc_obs, loc_auroc_obs, loc_pro_obs, epoch, gt_label_list, anomaly_score, gt_mask_list, anomaly_score_map_add, anomaly_score_map_mul, c.pro_eval)
-        
+        c.pro_eval=False
+        eval_ckpt=c.eval_ckpts["det"]
+        test_flow(c,conv_neck,msAttn_flow, fusion_flow, extractor,test_loader, eval_ckpt,det_auroc_obs, loc_auroc_obs, loc_pro_obs)
+        eval_ckpt=c.eval_ckpts["loc"]
+        test_flow(c,conv_neck,msAttn_flow, fusion_flow, extractor,test_loader, eval_ckpt,det_auroc_obs, loc_auroc_obs, loc_pro_obs)
+        c.pro_eval=True
+        eval_ckpt=c.eval_ckpts["pro"]
+        test_flow(c,conv_neck,msAttn_flow, fusion_flow, extractor,test_loader, eval_ckpt,det_auroc_obs, loc_auroc_obs, loc_pro_obs)
         return det_auroc_obs,loc_auroc_obs,loc_pro_obs
     if c.resume:
         last_epoch = load_weights(conv_neck,msAttn_flow, fusion_flow, os.path.join(c.ckpt_dir, 'last.pt'), optimizer)
@@ -290,15 +327,24 @@ def train_OurFlow(c):
         print()
         train_meta_epoch(c, epoch, train_loader, extractor,  conv_neck,msAttn_flow, fusion_flow, params, optimizer, warmup_scheduler, decay_scheduler, scaler if c.amp_enable else None)
 
-        gt_label_list, gt_mask_list, outputs_list, size_list,hidden_variables,cond_list = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
+        gt_label_list, gt_mask_list, outputs_lists, size_list,hidden_variables,cond_list = inference_meta_epoch(c, epoch, test_loader, extractor, conv_neck,msAttn_flow, fusion_flow)
 
-        if c.resample_args["resample"]:
-            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul \
-                = post_process_resampled(c, size_list, outputs_list,
-                                        msAttn_flow,fusion_flow,hidden_variables,cond_list)
+        if not c.post_augmentation:
+            outputs_lists=[outputs_lists["noflip"]]
         else:
-            anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = post_process(c, size_list, outputs_list)
+            outputs_lists=list(outputs_lists.values())
 
+        results=[]
+        for outputs_list in outputs_lists:
+            if c.resample_args["resample"]:
+                res\
+                    = post_process_resampled(c, size_list, outputs_list,
+                                            msAttn_flow,fusion_flow,hidden_variables,cond_list)
+            else:
+                res = post_process(c, size_list, outputs_list)
+            results.append(res)
+        y=lambda i:sum([res[i] for res in results])/len(results)
+        anomaly_score, anomaly_score_map_add, anomaly_score_map_mul = y(0),y(1),y(2)
         if c.pro_eval and (epoch > 0 and epoch % c.pro_eval_interval == 0):
             pro_eval = True
         else:
@@ -323,7 +369,7 @@ def train_OurFlow(c):
         # if best_loc_auroc and c.mode == 'train':
         #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
         # if best_loc_pro and c.mode == 'train':
-        #     save_weights(epoch, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
+        #     save_weights(epoch,conv_neck, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
         import os.path as osp
         os.makedirs(c.ckpt_dir,exist_ok=True)
         with open(osp.join(c.ckpt_dir,"auroc.txt"),"a+") as fp:

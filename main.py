@@ -17,7 +17,7 @@ def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
     # parser.add_argument('flow_name', type=str, 
     #                      help='flow model name')
-    parser.add_argument('--dataset', default='visa', type=str, 
+    parser.add_argument('--dataset', default='mvtec', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
                         help='train or test.')
@@ -59,12 +59,12 @@ def parsing_args(c):
         setattr(c, k, v)
     
     if c.dataset == 'mvtec':
-        from datasets import MVTEC_CLASS_NAMES
+        from Datasets.datasets import MVTEC_CLASS_NAMES
         setattr(c, 'data_path', './data/MVTec')
         if c.class_names == ['all']:
             setattr(c, 'class_names', MVTEC_CLASS_NAMES)
     elif c.dataset == 'visa':
-        from datasets import VISA_CLASS_NAMES
+        from Datasets.datasets import VISA_CLASS_NAMES
         setattr(c, 'data_path', './data/VisA_pytorch/')
         if c.class_names == ['all']:
             setattr(c, 'class_names', VISA_CLASS_NAMES)
@@ -73,22 +73,41 @@ def parsing_args(c):
 
     return c
 import json
+import os.path as osp
 def main(c):
     c = parsing_args(c)
     init_seeds(seed=c.seed)
-    # c.class_names=["transistor"]
+    # c.class_names=["cable","pill","tile","toothbrush","transistor","wood","screw","capsule"]
+    # c.class_names=["wood"]
     c.mode="train"
     c.flow_name="msAttnFlow"
+    # c.extractor="vit_base_resnet50_384"
+    # c.input_size=(384,384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse"
+    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_{c.extractor}"
+    print(c.version_name)
     c.batch_size=4
     print(c.class_names)
     results={}
     c.meta_epochs=50
+    c.data_path="/root/transformer-flow/data/mvtec2"
+
+    c.peer_augmentation=False
+    c.post_augmentation=False
+    c.peer_type="2"
+    c.dtd_path="/root/transformer-flow/data/dtd/images"
+    if c.peer_augmentation and c.peer_type=="2":
+        c.dtd_path="/root/transformer-flow/data/dtd"
+        c.data_path="/root/transformer-flow/data/MVTecDiffusion"
     for class_name in c.class_names:
         c.class_name = class_name
-        c.eval_ckpt=f"work_dirs/{c.version_name}/mvtec/{c.class_name}/best_det_auroc.pt"
+        eval_ckpt_root=f"work_dirs/{c.version_name}/mvtec/{c.class_name}/"
+        c.eval_ckpts={
+            "det":osp.join(eval_ckpt_root,"best_det_auroc.pt"),
+            "loc":osp.join(eval_ckpt_root,"best_loc_auroc.pt"),
+            "pro":osp.join(eval_ckpt_root,"best_loc_pro.pt"),
+        }
         print('-+'*5, class_name, '+-'*5)
         c.ckpt_dir = os.path.join(c.work_dir, c.version_name, c.dataset, c.class_name)
         c.use_attn=True
@@ -104,22 +123,28 @@ def main(c):
                           "stragety":"auto"}
         c.num_transformer_blocks=8
         c.pro_eval=False
+        c.pro_eval_interval=4
         det_auroc_obs,loc_auroc_obs,loc_pro_obs=train_OurFlow(c)
         
+
+
         result={"det_auroc":[det_auroc_obs.max_score,det_auroc_obs.max_epoch],
-                "loc_auroc":[loc_auroc_obs.max_score,loc_auroc_obs.max_epoch]}
+                "loc_auroc":[loc_auroc_obs.max_score,loc_auroc_obs.max_epoch],
+                "loc_pro":[loc_pro_obs.max_score,loc_pro_obs.max_epoch]}
         results[class_name]=result
 
+    loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
+    det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
+    pro_ave=sum([i["loc_pro"][0] for i in results.values()])/len(results.values())
+    results["average"]={"det_auroc":[det_ave,0],
+                        "loc_auroc":[loc_ave,0],
+                        "loc_pro":[pro_ave,0]}
     if c.mode=="train":
-        loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
-        det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
-        results["average"]={"det_auroc":[det_ave,0],
-                            "loc_auroc":[loc_ave,0]}
         with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"w") as fp:
             json.dump(results,fp)
 
-    with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"r") as fp:
-        results=json.load(fp)
+        with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"r") as fp:
+            results=json.load(fp)
     print(c.version_name)
     print("loc auroc")
     print("|||")
@@ -131,6 +156,11 @@ def main(c):
     print("|---|---|")
     for k,v in results.items():
         print(f"|{k}|{round(v['det_auroc'][0],4)}|")
+    print("loc pro")
+    print("|||")
+    print("|---|---|")
+    for k,v in results.items():
+        print(f"|{k}|{round(v['loc_pro'][0],4)}|")
 
 
 

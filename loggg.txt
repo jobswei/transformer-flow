@@ -1,0 +1,359 @@
+['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut', 'leather', 'metal_nut', 'pill', 'screw', 'tile', 'toothbrush', 'transistor', 'wood', 'zipper']
+-+-+-+-+-+ bottle +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/bottle/best_det_auroc.pt
+[2024-06-09-20:37:04] Epoch 3   test loss: -1.322e+06	FPS: 25.9
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:37:04] Epoch [3/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:37:11] Epoch [3/49] Loc.AUROC: last: 98.64	max: 98.64	epoch_max: 3
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/bottle/best_loc_auroc.pt
+[2024-06-09-20:37:14] Epoch 5   test loss: -1.529e+06	FPS: 33.2
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:37:14] Epoch [5/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:37:21] Epoch [5/49] Loc.AUROC: last: 99.11	max: 99.11	epoch_max: 5
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/bottle/best_loc_pro.pt
+[2024-06-09-20:37:24] Epoch 34   test loss: -1.880e+06	FPS: 32.9
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:37:25] Epoch [34/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:37:32] Epoch [34/49] Loc.AUROC: last: 98.98	max: 99.11	epoch_max: 5
+[2024-06-09-20:38:15] Epoch [34/49] Loc.PRO: last: 97.79	max: 97.79	epoch_max: 34
+-+-+-+-+-+ cable +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/cable/best_det_auroc.pt
+[2024-06-09-20:38:24] Epoch 37   test loss: -1.652e+06	FPS: 29.5
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:38:24] Epoch [37/49] Det.AUROC: last: 99.53	max: 99.53	epoch_max: 37
+[2024-06-09-20:38:38] Epoch [37/49] Loc.AUROC: last: 98.60	max: 98.60	epoch_max: 37
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/cable/best_loc_auroc.pt
+[2024-06-09-20:38:43] Epoch 44   test loss: -1.668e+06	FPS: 33.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:38:43] Epoch [44/49] Det.AUROC: last: 99.42	max: 99.53	epoch_max: 37
+[2024-06-09-20:38:57] Epoch [44/49] Loc.AUROC: last: 98.65	max: 98.65	epoch_max: 44
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/cable/best_loc_pro.pt
+[2024-06-09-20:39:02] Epoch 30   test loss: -1.628e+06	FPS: 32.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:39:03] Epoch [30/49] Det.AUROC: last: 99.42	max: 99.53	epoch_max: 37
+[2024-06-09-20:39:16] Epoch [30/49] Loc.AUROC: last: 98.57	max: 98.65	epoch_max: 44
+[2024-06-09-20:40:27] Epoch [30/49] Loc.PRO: last: 93.85	max: 93.85	epoch_max: 30
+-+-+-+-+-+ capsule +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/capsule/best_det_auroc.pt
+[2024-06-09-20:40:35] Epoch 43   test loss: -1.929e+06	FPS: 31.4
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:40:35] Epoch [43/49] Det.AUROC: last: 98.84	max: 98.84	epoch_max: 43
+[2024-06-09-20:40:47] Epoch [43/49] Loc.AUROC: last: 99.32	max: 99.32	epoch_max: 43
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/capsule/best_loc_auroc.pt
+[2024-06-09-20:40:51] Epoch 43   test loss: -1.929e+06	FPS: 33.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:40:52] Epoch [43/49] Det.AUROC: last: 98.84	max: 98.84	epoch_max: 43
+[2024-06-09-20:41:03] Epoch [43/49] Loc.AUROC: last: 99.32	max: 99.32	epoch_max: 43
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/capsule/best_loc_pro.pt
+[2024-06-09-20:41:08] Epoch 50   test loss: -1.952e+06	FPS: 33.4
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:41:08] Epoch [50/49] Det.AUROC: last: 98.64	max: 98.84	epoch_max: 43
+[2024-06-09-20:41:20] Epoch [50/49] Loc.AUROC: last: 99.31	max: 99.32	epoch_max: 43
+[2024-06-09-20:42:21] Epoch [50/49] Loc.PRO: last: 97.57	max: 97.57	epoch_max: 50
+-+-+-+-+-+ carpet +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/carpet/best_det_auroc.pt
+[2024-06-09-20:42:28] Epoch 1   test loss: -6.831e+05	FPS: 30.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:42:28] Epoch [1/49] Det.AUROC: last: 99.08	max: 99.08	epoch_max: 1
+[2024-06-09-20:42:38] Epoch [1/49] Loc.AUROC: last: 98.47	max: 98.47	epoch_max: 1
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/carpet/best_loc_auroc.pt
+[2024-06-09-20:42:42] Epoch 4   test loss: -1.371e+06	FPS: 32.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:42:43] Epoch [4/49] Det.AUROC: last: 98.80	max: 99.08	epoch_max: 1
+[2024-06-09-20:42:53] Epoch [4/49] Loc.AUROC: last: 99.08	max: 99.08	epoch_max: 4
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/carpet/best_loc_pro.pt
+[2024-06-09-20:42:57] Epoch 4   test loss: -1.371e+06	FPS: 32.4
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:42:57] Epoch [4/49] Det.AUROC: last: 98.80	max: 99.08	epoch_max: 1
+[2024-06-09-20:43:08] Epoch [4/49] Loc.AUROC: last: 99.08	max: 99.08	epoch_max: 4
+[2024-06-09-20:44:01] Epoch [4/49] Loc.PRO: last: 98.04	max: 98.04	epoch_max: 4
+-+-+-+-+-+ grid +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/grid/best_det_auroc.pt
+[2024-06-09-20:44:07] Epoch 40   test loss: -1.776e+06	FPS: 29.5
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:44:07] Epoch [40/49] Det.AUROC: last: 99.67	max: 99.67	epoch_max: 40
+[2024-06-09-20:44:14] Epoch [40/49] Loc.AUROC: last: 99.12	max: 99.12	epoch_max: 40
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/grid/best_loc_auroc.pt
+[2024-06-09-20:44:18] Epoch 47   test loss: -1.790e+06	FPS: 27.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:44:18] Epoch [47/49] Det.AUROC: last: 99.58	max: 99.67	epoch_max: 40
+[2024-06-09-20:44:24] Epoch [47/49] Loc.AUROC: last: 99.19	max: 99.19	epoch_max: 47
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/grid/best_loc_pro.pt
+[2024-06-09-20:44:28] Epoch 50   test loss: -1.801e+06	FPS: 27.5
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:44:28] Epoch [50/49] Det.AUROC: last: 99.58	max: 99.67	epoch_max: 40
+[2024-06-09-20:44:35] Epoch [50/49] Loc.AUROC: last: 99.17	max: 99.19	epoch_max: 47
+[2024-06-09-20:45:12] Epoch [50/49] Loc.PRO: last: 97.27	max: 97.27	epoch_max: 50
+-+-+-+-+-+ hazelnut +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/hazelnut/best_det_auroc.pt
+[2024-06-09-20:45:19] Epoch 6   test loss: -1.347e+06	FPS: 29.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:45:19] Epoch [6/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 6
+[2024-06-09-20:45:29] Epoch [6/49] Loc.AUROC: last: 97.89	max: 97.89	epoch_max: 6
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/hazelnut/best_loc_auroc.pt
+[2024-06-09-20:45:33] Epoch 26   test loss: -1.757e+06	FPS: 31.5
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:45:33] Epoch [26/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 6
+[2024-06-09-20:45:43] Epoch [26/49] Loc.AUROC: last: 98.55	max: 98.55	epoch_max: 26
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/hazelnut/best_loc_pro.pt
+[2024-06-09-20:45:47] Epoch 16   test loss: -1.597e+06	FPS: 32.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:45:47] Epoch [16/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 6
+[2024-06-09-20:45:57] Epoch [16/49] Loc.AUROC: last: 98.52	max: 98.55	epoch_max: 26
+[2024-06-09-20:46:49] Epoch [16/49] Loc.PRO: last: 97.49	max: 97.49	epoch_max: 16
+-+-+-+-+-+ leather +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/leather/best_det_auroc.pt
+[2024-06-09-20:46:56] Epoch 28   test loss: -1.608e+06	FPS: 33.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:46:56] Epoch [28/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 28
+[2024-06-09-20:47:07] Epoch [28/49] Loc.AUROC: last: 99.71	max: 99.71	epoch_max: 28
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/leather/best_loc_auroc.pt
+[2024-06-09-20:47:12] Epoch 30   test loss: -1.635e+06	FPS: 31.6
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:47:12] Epoch [30/49] Det.AUROC: last: 99.93	max: 100.00	epoch_max: 28
+[2024-06-09-20:47:24] Epoch [30/49] Loc.AUROC: last: 99.71	max: 99.71	epoch_max: 30
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/leather/best_loc_pro.pt
+[2024-06-09-20:47:28] Epoch 5   test loss: -1.364e+06	FPS: 30.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:47:29] Epoch [5/49] Det.AUROC: last: 99.73	max: 100.00	epoch_max: 28
+[2024-06-09-20:47:40] Epoch [5/49] Loc.AUROC: last: 99.63	max: 99.71	epoch_max: 30
+[2024-06-09-20:48:35] Epoch [5/49] Loc.PRO: last: 99.95	max: 99.95	epoch_max: 5
+-+-+-+-+-+ metal_nut +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/metal_nut/best_det_auroc.pt
+[2024-06-09-20:48:42] Epoch 7   test loss: -1.530e+06	FPS: 33.9
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:48:42] Epoch [7/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 7
+[2024-06-09-20:48:52] Epoch [7/49] Loc.AUROC: last: 99.07	max: 99.07	epoch_max: 7
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/metal_nut/best_loc_auroc.pt
+[2024-06-09-20:48:57] Epoch 5   test loss: -1.452e+06	FPS: 30.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:48:57] Epoch [5/49] Det.AUROC: last: 99.90	max: 100.00	epoch_max: 7
+[2024-06-09-20:49:08] Epoch [5/49] Loc.AUROC: last: 99.11	max: 99.11	epoch_max: 5
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/metal_nut/best_loc_pro.pt
+[2024-06-09-20:49:12] Epoch 6   test loss: -1.498e+06	FPS: 32.9
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:49:12] Epoch [6/49] Det.AUROC: last: 99.95	max: 100.00	epoch_max: 7
+[2024-06-09-20:49:22] Epoch [6/49] Loc.AUROC: last: 99.07	max: 99.11	epoch_max: 5
+[2024-06-09-20:50:29] Epoch [6/49] Loc.PRO: last: 91.87	max: 91.87	epoch_max: 6
+-+-+-+-+-+ pill +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/pill/best_det_auroc.pt
+[2024-06-09-20:50:37] Epoch 49   test loss: -1.904e+06	FPS: 32.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:50:37] Epoch [49/49] Det.AUROC: last: 99.26	max: 99.26	epoch_max: 49
+[2024-06-09-20:50:53] Epoch [49/49] Loc.AUROC: last: 98.22	max: 98.22	epoch_max: 49
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/pill/best_loc_auroc.pt
+[2024-06-09-20:50:58] Epoch 6   test loss: -1.624e+06	FPS: 34.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:50:58] Epoch [6/49] Det.AUROC: last: 96.73	max: 99.26	epoch_max: 49
+[2024-06-09-20:51:14] Epoch [6/49] Loc.AUROC: last: 98.49	max: 98.49	epoch_max: 6
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/pill/best_loc_pro.pt
+[2024-06-09-20:51:19] Epoch 48   test loss: -1.905e+06	FPS: 31.6
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:51:20] Epoch [48/49] Det.AUROC: last: 99.07	max: 99.26	epoch_max: 49
+[2024-06-09-20:51:35] Epoch [48/49] Loc.AUROC: last: 98.24	max: 98.49	epoch_max: 6
+[2024-06-09-20:53:00] Epoch [48/49] Loc.PRO: last: 94.73	max: 94.73	epoch_max: 48
+-+-+-+-+-+ screw +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/screw/best_det_auroc.pt
+[2024-06-09-20:53:08] Epoch 46   test loss: -2.029e+06	FPS: 32.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:53:08] Epoch [46/49] Det.AUROC: last: 98.42	max: 98.42	epoch_max: 46
+[2024-06-09-20:53:22] Epoch [46/49] Loc.AUROC: last: 99.40	max: 99.40	epoch_max: 46
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/screw/best_loc_auroc.pt
+[2024-06-09-20:53:28] Epoch 47   test loss: -2.033e+06	FPS: 31.4
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:53:28] Epoch [47/49] Det.AUROC: last: 98.03	max: 98.42	epoch_max: 46
+[2024-06-09-20:53:43] Epoch [47/49] Loc.AUROC: last: 99.42	max: 99.42	epoch_max: 47
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/screw/best_loc_pro.pt
+[2024-06-09-20:53:48] Epoch 47   test loss: -2.033e+06	FPS: 33.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:53:48] Epoch [47/49] Det.AUROC: last: 98.03	max: 98.42	epoch_max: 46
+[2024-06-09-20:54:03] Epoch [47/49] Loc.AUROC: last: 99.42	max: 99.42	epoch_max: 47
+[2024-06-09-20:55:16] Epoch [47/49] Loc.PRO: last: 96.33	max: 96.33	epoch_max: 47
+-+-+-+-+-+ tile +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/tile/best_det_auroc.pt
+[2024-06-09-20:55:23] Epoch 3   test loss: -1.285e+06	FPS: 33.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:55:23] Epoch [3/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:55:34] Epoch [3/49] Loc.AUROC: last: 97.44	max: 97.44	epoch_max: 3
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/tile/best_loc_auroc.pt
+[2024-06-09-20:55:38] Epoch 17   test loss: -1.548e+06	FPS: 29.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:55:38] Epoch [17/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:55:49] Epoch [17/49] Loc.AUROC: last: 98.00	max: 98.00	epoch_max: 17
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/tile/best_loc_pro.pt
+[2024-06-09-20:55:54] Epoch 4   test loss: -1.310e+06	FPS: 32.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:55:54] Epoch [4/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 3
+[2024-06-09-20:56:04] Epoch [4/49] Loc.AUROC: last: 97.65	max: 98.00	epoch_max: 17
+[2024-06-09-20:57:07] Epoch [4/49] Loc.PRO: last: 94.58	max: 94.58	epoch_max: 4
+-+-+-+-+-+ toothbrush +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/toothbrush/best_det_auroc.pt
+[2024-06-09-20:57:12] Epoch 20   test loss: -1.714e+06	FPS: 23.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:57:12] Epoch [20/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 20
+[2024-06-09-20:57:16] Epoch [20/49] Loc.AUROC: last: 98.26	max: 98.26	epoch_max: 20
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/toothbrush/best_loc_auroc.pt
+[2024-06-09-20:57:18] Epoch 18   test loss: -1.693e+06	FPS: 24.2
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:57:18] Epoch [18/49] Det.AUROC: last: 98.89	max: 100.00	epoch_max: 20
+[2024-06-09-20:57:22] Epoch [18/49] Loc.AUROC: last: 98.30	max: 98.30	epoch_max: 18
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/toothbrush/best_loc_pro.pt
+[2024-06-09-20:57:24] Epoch 43   test loss: -1.830e+06	FPS: 23.9
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:57:24] Epoch [43/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 20
+[2024-06-09-20:57:27] Epoch [43/49] Loc.AUROC: last: 98.04	max: 98.30	epoch_max: 18
+[2024-06-09-20:57:48] Epoch [43/49] Loc.PRO: last: 86.01	max: 86.01	epoch_max: 43
+-+-+-+-+-+ transistor +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/transistor/best_det_auroc.pt
+[2024-06-09-20:57:54] Epoch 13   test loss: -1.597e+06	FPS: 32.3
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:57:54] Epoch [13/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 13
+[2024-06-09-20:58:03] Epoch [13/49] Loc.AUROC: last: 97.11	max: 97.11	epoch_max: 13
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/transistor/best_loc_auroc.pt
+[2024-06-09-20:58:06] Epoch 28   test loss: -1.703e+06	FPS: 32.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:58:07] Epoch [28/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 13
+[2024-06-09-20:58:16] Epoch [28/49] Loc.AUROC: last: 97.41	max: 97.41	epoch_max: 28
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/transistor/best_loc_pro.pt
+[2024-06-09-20:58:20] Epoch 50   test loss: -1.765e+06	FPS: 30.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:58:20] Epoch [50/49] Det.AUROC: last: 100.00	max: 100.00	epoch_max: 13
+[2024-06-09-20:58:29] Epoch [50/49] Loc.AUROC: last: 97.40	max: 97.41	epoch_max: 28
+[2024-06-09-20:59:17] Epoch [50/49] Loc.PRO: last: 93.59	max: 93.59	epoch_max: 50
+-+-+-+-+-+ wood +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/wood/best_det_auroc.pt
+[2024-06-09-20:59:23] Epoch 5   test loss: -1.375e+06	FPS: 30.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:59:23] Epoch [5/49] Det.AUROC: last: 99.91	max: 99.91	epoch_max: 5
+[2024-06-09-20:59:31] Epoch [5/49] Loc.AUROC: last: 95.44	max: 95.44	epoch_max: 5
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/wood/best_loc_auroc.pt
+[2024-06-09-20:59:34] Epoch 46   test loss: -1.698e+06	FPS: 27.5
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:59:34] Epoch [46/49] Det.AUROC: last: 99.56	max: 99.91	epoch_max: 5
+[2024-06-09-20:59:41] Epoch [46/49] Loc.AUROC: last: 96.40	max: 96.40	epoch_max: 46
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/wood/best_loc_pro.pt
+[2024-06-09-20:59:45] Epoch 5   test loss: -1.375e+06	FPS: 26.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-20:59:45] Epoch [5/49] Det.AUROC: last: 99.91	max: 99.91	epoch_max: 5
+[2024-06-09-20:59:52] Epoch [5/49] Loc.AUROC: last: 95.44	max: 96.40	epoch_max: 46
+[2024-06-09-21:00:33] Epoch [5/49] Loc.PRO: last: 94.82	max: 94.82	epoch_max: 5
+-+-+-+-+-+ zipper +-+-+-+-+-
+Channels of extracted features: [256, 512, 1024]
+Build msAttn flow: channels:[256, 512, 1024], block:8, cond:[64, 64, 64]
+Build fusion flow with channels [256, 512, 1024]
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/zipper/best_det_auroc.pt
+[2024-06-09-21:00:41] Epoch 18   test loss: -1.862e+06	FPS: 31.7
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-21:00:41] Epoch [18/49] Det.AUROC: last: 99.95	max: 99.95	epoch_max: 18
+[2024-06-09-21:00:55] Epoch [18/49] Loc.AUROC: last: 99.21	max: 99.21	epoch_max: 18
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/zipper/best_loc_auroc.pt
+[2024-06-09-21:01:00] Epoch 16   test loss: -1.843e+06	FPS: 32.0
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-21:01:00] Epoch [16/49] Det.AUROC: last: 99.92	max: 99.95	epoch_max: 18
+[2024-06-09-21:01:15] Epoch [16/49] Loc.AUROC: last: 99.23	max: 99.23	epoch_max: 16
+Loading weights from work_dirs/mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/mvtec/zipper/best_loc_pro.pt
+[2024-06-09-21:01:20] Epoch 50   test loss: -1.985e+06	FPS: 31.1
+Multi-scale sizes: [[64, 64], [32, 32], [16, 16]]
+[2024-06-09-21:01:20] Epoch [50/49] Det.AUROC: last: 99.87	max: 99.95	epoch_max: 18
+[2024-06-09-21:01:34] Epoch [50/49] Loc.AUROC: last: 99.12	max: 99.23	epoch_max: 16
+[2024-06-09-21:02:48] Epoch [50/49] Loc.PRO: last: 97.89	max: 97.89	epoch_max: 50
+mvtec_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse
+loc auroc
+|||
+|---|---|
+|bottle|99.1105|
+|cable|98.6484|
+|capsule|99.3218|
+|carpet|99.0815|
+|grid|99.1938|
+|hazelnut|98.5519|
+|leather|99.7149|
+|metal_nut|99.1065|
+|pill|98.4923|
+|screw|99.4173|
+|tile|98.0006|
+|toothbrush|98.301|
+|transistor|97.4145|
+|wood|96.3956|
+|zipper|99.2305|
+|average|98.6654|
+det auroc
+|||
+|---|---|
+|bottle|100.0|
+|cable|99.5315|
+|capsule|98.8432|
+|carpet|99.077|
+|grid|99.6658|
+|hazelnut|100.0|
+|leather|100.0|
+|metal_nut|100.0|
+|pill|99.2635|
+|screw|98.4218|
+|tile|100.0|
+|toothbrush|100.0|
+|transistor|100.0|
+|wood|99.9123|
+|zipper|99.9475|
+|average|99.6442|
+loc pro
+|||
+|---|---|
+|bottle|97.7876|
+|cable|93.8507|
+|capsule|97.5728|
+|carpet|98.0392|
+|grid|97.2655|
+|hazelnut|97.4899|
+|leather|99.9532|
+|metal_nut|91.874|
+|pill|94.7275|
+|screw|96.3259|
+|tile|94.5834|
+|toothbrush|86.0096|
+|transistor|93.589|
+|wood|94.8196|
+|zipper|97.8924|
+|average|95.452|

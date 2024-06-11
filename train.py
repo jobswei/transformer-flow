@@ -9,11 +9,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.cuda.amp import autocast, GradScaler
 
-from datasets import MVTecDataset, VisADataset
+from Datasets.datasets import MVTecDataset, VisADataset
 from models.extractors import build_extractor
 from models.flow_models import build_msflow_model,build_transformer_flow_model
 from post_process import post_process
-from utils import Score_Observer, t2np, positionalencoding2d, save_weights, load_weights
+from utils.utils import Score_Observer, t2np, positionalencoding2d, save_weights, load_weights
 from evaluations import eval_det_loc
 
 import tqdm

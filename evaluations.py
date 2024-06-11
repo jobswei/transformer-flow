@@ -6,7 +6,7 @@ from skimage.measure import label, regionprops
 import numpy as np
 import torch
 
-from utils import rescale
+from utils.utils import rescale
 
 def eval_det_auroc(det_auroc_obs, epoch, gt_label, anomaly_score):
     det_auroc = roc_auc_score(gt_label, anomaly_score) * 100
