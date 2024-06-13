@@ -24,6 +24,7 @@ def get_pool_layer(c):
         # pool_layer = nn.AvgPool2d(2,2,0)
         # pool_layer = nn.AvgPool2d(3, 2, 1)
         pool_layer = nn.AvgPool2d(4,2,1)
+        # pool_layer = nn.AvgPool2d(5,4,2)
         # pool_layer=nn.Identity()
     elif c.pool_type == 'max':
         pool_layer = nn.MaxPool2d(3, 2, 1)
@@ -364,10 +365,10 @@ def train_OurFlow(c):
             )
 
         # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'last', c.ckpt_dir, optimizer)
-        # if best_det_auroc and c.mode == 'train':
-        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
-        # if best_loc_auroc and c.mode == 'train':
-        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
+        if best_det_auroc and c.mode == 'train':
+            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
+        if best_loc_auroc and c.mode == 'train':
+            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
         # if best_loc_pro and c.mode == 'train':
         #     save_weights(epoch,conv_neck, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
         import os.path as osp

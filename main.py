@@ -17,7 +17,7 @@ def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
     # parser.add_argument('flow_name', type=str, 
     #                      help='flow model name')
-    parser.add_argument('--dataset', default='mvtec', type=str, 
+    parser.add_argument('--dataset', default='visa', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
                         help='train or test.')
@@ -76,22 +76,26 @@ import json
 import os.path as osp
 def main(c):
     c = parsing_args(c)
+    c.seed=1314
+    # c.top_k=0.03
     init_seeds(seed=c.seed)
     # c.class_names=["cable","pill","tile","toothbrush","transistor","wood","screw","capsule"]
-    # c.class_names=["wood"]
+    # c.class_names=["transistor"]
+    # c.class_names=["macaroni2","capsules"]
+    # c.class_names=["cable","grid","pill"]
     c.mode="train"
     c.flow_name="msAttnFlow"
-    # c.extractor="vit_base_resnet50_384"
-    # c.input_size=(384,384)
+    c.extractor="convnextv2_base"
+    c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_{c.extractor}"
+    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_{c.extractor}_100ep"
     print(c.version_name)
     c.batch_size=4
     print(c.class_names)
     results={}
-    c.meta_epochs=50
-    c.data_path="/root/transformer-flow/data/mvtec2"
+    c.meta_epochs=100
+    # c.data_path="/root/transformer-flow/data/mvtec2"
 
     c.peer_augmentation=False
     c.post_augmentation=False
@@ -103,6 +107,7 @@ def main(c):
     for class_name in c.class_names:
         c.class_name = class_name
         eval_ckpt_root=f"work_dirs/{c.version_name}/mvtec/{c.class_name}/"
+        eval_ckpt_root=f"/root/transformer-flow/work_dirs/visa_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/visa/macaroni2"
         c.eval_ckpts={
             "det":osp.join(eval_ckpt_root,"best_det_auroc.pt"),
             "loc":osp.join(eval_ckpt_root,"best_loc_auroc.pt"),

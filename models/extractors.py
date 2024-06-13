@@ -11,6 +11,21 @@ def build_extractor(c):
         extractor = resnext50_32x4d(pretrained=True, progress=True)
     elif c.extractor == 'wide_resnet50_2':
         extractor = wide_resnet50_2(pretrained=True, progress=True)
+    elif c.extractor == 'resnet101':
+        extractor = timm.create_model(
+                c.extractor,
+                pretrained=True,
+                features_only=True,
+                out_indices=[1, 2, 3],
+            )
+    elif c.extractor == 'convnextv2_base':
+        print("================")
+        extractor = timm.create_model(
+            'convnext_base_384_in22ft1k',
+            pretrained=True,
+            features_only=True,
+            out_indices=[1, 2, 3],
+        )
     else:
         extractor = timm.create_model(
                 c.extractor,
