@@ -17,7 +17,7 @@ def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
     # parser.add_argument('flow_name', type=str, 
     #                      help='flow model name')
-    parser.add_argument('--dataset', default='visa', type=str, 
+    parser.add_argument('--dataset', default='mvtec', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
                         help='train or test.')
@@ -85,17 +85,16 @@ def main(c):
     # c.class_names=["cable","grid","pill"]
     c.mode="train"
     c.flow_name="msAttnFlow"
-    c.extractor="convnextv2_base"
-    c.input_size=(384, 384)
+    # c.extractor="convnextv2_base"
+    # c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_{c.extractor}_100ep"
+    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}"
     print(c.version_name)
     c.batch_size=4
     print(c.class_names)
     results={}
-    c.meta_epochs=100
-    # c.data_path="/root/transformer-flow/data/mvtec2"
+    c.meta_epochs=50
 
     c.peer_augmentation=False
     c.post_augmentation=False
@@ -138,16 +137,17 @@ def main(c):
                 "loc_pro":[loc_pro_obs.max_score,loc_pro_obs.max_epoch]}
         results[class_name]=result
 
-    loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
-    det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
-    pro_ave=sum([i["loc_pro"][0] for i in results.values()])/len(results.values())
-    results["average"]={"det_auroc":[det_ave,0],
-                        "loc_auroc":[loc_ave,0],
-                        "loc_pro":[pro_ave,0]}
-    if c.mode=="train":
-        with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"w") as fp:
-            json.dump(results,fp)
+        loc_ave=sum([i["loc_auroc"][0] for i in results.values()])/len(results.values())
+        det_ave=sum([i["det_auroc"][0] for i in results.values()])/len(results.values())
+        pro_ave=sum([i["loc_pro"][0] for i in results.values()])/len(results.values())
+        results["average"]={"det_auroc":[det_ave,0],
+                            "loc_auroc":[loc_ave,0],
+                            "loc_pro":[pro_ave,0]}
+        if c.mode=="train":
+            with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"w") as fp:
+                json.dump(results,fp)
 
+    if c.mode=="train":
         with open(os.path.join(c.work_dir, c.version_name, c.dataset,"results.json"),"r") as fp:
             results=json.load(fp)
     print(c.version_name)
