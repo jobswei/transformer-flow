@@ -17,7 +17,7 @@ def parsing_args(c):
     parser = argparse.ArgumentParser(description='msflow')
     # parser.add_argument('flow_name', type=str, 
     #                      help='flow model name')
-    parser.add_argument('--dataset', default='mvtec', type=str, 
+    parser.add_argument('--dataset', default='visa', type=str, 
                         choices=['mvtec', 'visa'], help='dataset name')
     parser.add_argument('--mode', default='train', type=str, 
                         help='train or test.')
@@ -76,7 +76,7 @@ import json
 import os.path as osp
 def main(c):
     c = parsing_args(c)
-    c.seed=1314
+    # c.seed=1314
     # c.top_k=0.03
     init_seeds(seed=c.seed)
     # c.class_names=["cable","pill","tile","toothbrush","transistor","wood","screw","capsule"]
@@ -89,7 +89,7 @@ def main(c):
     # c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}"
+    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse"
     print(c.version_name)
     c.batch_size=4
     print(c.class_names)
