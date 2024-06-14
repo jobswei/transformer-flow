@@ -65,6 +65,7 @@ class MSAttnFlowBlock(nn.Module):
             return res,jac_lis
         else:
             jac_lis=torch.zeros((len(hidden_variables),hidden_variables[0].shape[0])).to(hidden_variables[0].device)
+            res=hidden_variables
             if self.use_attn:
                 res,attn_jac=self.attn_block(hidden_variables)
             if self.use_ffn:

@@ -65,7 +65,7 @@ def parsing_args(c):
             setattr(c, 'class_names', MVTEC_CLASS_NAMES)
     elif c.dataset == 'visa':
         from Datasets.datasets import VISA_CLASS_NAMES
-        setattr(c, 'data_path', './data/VisA_pytorch/')
+        setattr(c, 'data_path', './data/visa_pytorch/')
         if c.class_names == ['all']:
             setattr(c, 'class_names', VISA_CLASS_NAMES)
         
@@ -89,7 +89,8 @@ def main(c):
     # c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse"
+    ablation_version="4block"
+    c.version_name=f"visa_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_{ablation_version}"
     print(c.version_name)
     c.batch_size=4
     print(c.class_names)
@@ -125,7 +126,7 @@ def main(c):
         c.resample_args={"resample":False,
                           "thresholds":[0.4,0.5,0.6],
                           "stragety":"auto"}
-        c.num_transformer_blocks=8
+        c.num_transformer_blocks=4
         c.pro_eval=False
         c.pro_eval_interval=4
         det_auroc_obs,loc_auroc_obs,loc_pro_obs=train_OurFlow(c)
