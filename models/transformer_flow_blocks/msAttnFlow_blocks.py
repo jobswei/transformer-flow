@@ -42,7 +42,7 @@ class MSAttnFlowBlock(nn.Module):
             self.norm=Normalize(self.variable_dims[0][1])
     def output_dims(self,dim_in):
         return dim_in
-    def forward(self,hidden_variables:list[torch.tensor],c=[],jac:bool=True,rev:bool=False):
+    def forward(self,hidden_variables:list[torch.tensor],c=[[None,None,None]],jac:bool=True,rev:bool=False):
         if rev:
             return self.forward_rev(hidden_variables,c,jac)
         if not self.reverse_blocks:

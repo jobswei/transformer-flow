@@ -266,11 +266,13 @@ def train_OurFlow(c):
         image=extractor(image)
         image=[pool_layer(i) for i in image]
         dims=[list(i.shape) for i in image]
+        print("Channels of extracted features:", dims)
         break
     output_channels=[i[1] for i in dims]
     c.output_channels=output_channels
     if c.flow_name=="msAttnFlow":
         conv_neck,msAttn_flow,fusion_flow=build_ms_attn_flow_model(c,output_channels,dims)
+        import IPython;IPython.embed();raise
     elif c.flow_name=="TransformerFlow":
         conv_neck,msAttn_flow,fusion_flow=build_transformer_flow_model(c,output_channels,dims)
     conv_neck=conv_neck.to(c.device)
@@ -365,10 +367,10 @@ def train_OurFlow(c):
             )
 
         # save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'last', c.ckpt_dir, optimizer)
-        if best_det_auroc and c.mode == 'train':
-            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
-        if best_loc_auroc and c.mode == 'train':
-            save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
+        # if best_det_auroc and c.mode == 'train':
+        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_det_auroc', c.ckpt_dir)
+        # if best_loc_auroc and c.mode == 'train':
+        #     save_weights(epoch,conv_neck,msAttn_flow, fusion_flow, 'best_loc_auroc', c.ckpt_dir)
         # if best_loc_pro and c.mode == 'train':
         #     save_weights(epoch,conv_neck, msAttn_flow, fusion_flow, 'best_loc_pro', c.ckpt_dir)
         import os.path as osp

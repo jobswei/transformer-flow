@@ -83,7 +83,8 @@ def build_ms_attn_flow_model(c, c_feats, all_dims):
                 attn_block=AttentionBU
             else:
                 attn_block=AttentionTD
-        msAttn_flow.append(MSAttnFlowBlock,cond=0,cond_shape=(c_conds[0],1,1),
+        cond=0 if c.use_cond else None
+        msAttn_flow.append(MSAttnFlowBlock,cond=cond,cond_shape=(c_conds[0],1,1),
                         use_attn=c.use_attn,use_all_channels=c.use_all_channels,use_ffn=c.use_ffn,ffn_residual=c.ffn_residual,use_norm=c.use_norm,reverse_blocks=c.reverse_blocks,
                         attn_block=attn_block,subnet_constructor=subnet_conv_ln, affine_clamping=clamp_alpha,global_affine_type='SOFTPLUS')
 

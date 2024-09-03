@@ -86,10 +86,14 @@ def main(c):
     c.mode="train"
     c.flow_name="msAttnFlow"
     # c.extractor="convnextv2_base"
-    # c.input_size=(384, 384)
+    # c.extractor="convnext_base_384_in22ft1k"
+    c.extractor="inceptionnext"
+    # c.extractor="rdnet"
+    # c.extractor="ghostnet"
+    c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}"
+    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}_{c.extractor}"
     print(c.version_name)
     c.batch_size=4
     print(c.class_names)
@@ -114,6 +118,7 @@ def main(c):
         }
         print('-+'*5, class_name, '+-'*5)
         c.ckpt_dir = os.path.join(c.work_dir, c.version_name, c.dataset, c.class_name)
+        c.use_cond=True
         c.use_attn=True
         c.use_conv=False
         c.use_ffn=False
