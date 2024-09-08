@@ -85,17 +85,17 @@ def main(c):
     # c.class_names=["cable","grid","pill"]
     c.mode="train"
     c.flow_name="msAttnFlow"
-    # c.extractor="convnextv2_base"
+    # c.extractor="convnextv2_large.fcmae_ft_in22k_in1k"
     # c.extractor="convnext_base_384_in22ft1k"
-    c.extractor="inceptionnext"
+    # c.extractor="inceptionnext"
     # c.extractor="rdnet"
     # c.extractor="ghostnet"
-    c.input_size=(384, 384)
+    # c.input_size=(384, 384)
     # c.version_name = 'msflow_{}_{}pool_pl{}'.format(c.extractor, c.pool_type, "".join([str(x) for x in c.parallel_blocks]))
     # c.version_name=f"{c.flow_name}_transistor"
-    c.version_name=f"mvtec_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}_{c.extractor}"
+    c.version_name=f"{c.dataset}_{c.flow_name}_pool421_allChannel_noNeck_8blocks_reverse_seed{c.seed}_{c.extractor}"
     print(c.version_name)
-    c.batch_size=4
+    c.batch_size=1
     print(c.class_names)
     results={}
     c.meta_epochs=50
@@ -110,7 +110,7 @@ def main(c):
     for class_name in c.class_names:
         c.class_name = class_name
         eval_ckpt_root=f"work_dirs/{c.version_name}/mvtec/{c.class_name}/"
-        eval_ckpt_root=f"/root/transformer-flow/work_dirs/visa_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse/visa/macaroni2"
+        eval_ckpt_root=f"/home/xiaomi/transformer-flow/work_dirs/visa_msAttnFlow_pool421_allChannel_noNeck_8blocks_reverse_macaroni2/visa/macaroni2"
         c.eval_ckpts={
             "det":osp.join(eval_ckpt_root,"best_det_auroc.pt"),
             "loc":osp.join(eval_ckpt_root,"best_loc_auroc.pt"),

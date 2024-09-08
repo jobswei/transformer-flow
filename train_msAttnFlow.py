@@ -272,7 +272,6 @@ def train_OurFlow(c):
     c.output_channels=output_channels
     if c.flow_name=="msAttnFlow":
         conv_neck,msAttn_flow,fusion_flow=build_ms_attn_flow_model(c,output_channels,dims)
-        import IPython;IPython.embed();raise
     elif c.flow_name=="TransformerFlow":
         conv_neck,msAttn_flow,fusion_flow=build_transformer_flow_model(c,output_channels,dims)
     conv_neck=conv_neck.to(c.device)
